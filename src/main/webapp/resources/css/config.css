@@ -1,0 +1,24 @@
+@CHARSET "ISO-8859-1";
+
+
+
+
+#copyright {
+	min-height: 40px;
+	background-color: #000000;
+}
+
+#copyright p {
+	text-align: left;
+	color: #FFF;
+	padding: 10px 0;
+	margin-bottom: 0px;
+}
+
+#contour{ height: 100px;
+    width: 500px;
+    border: 5px solid gray;}
+
+#banniere{width:50%}
+
+#foot{color:white; text-align: center}
