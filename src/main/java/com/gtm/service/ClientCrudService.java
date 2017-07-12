@@ -1,6 +1,13 @@
 package com.gtm.service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
 
 import com.gtm.dao.ClientCrudDao;
 import com.gtm.dao.IntClientCrudDao;
@@ -17,5 +24,9 @@ public class ClientCrudService extends GenericCrudService<Client> {
 	public ClientCrudDao getDao(){
 		return clientDao;
 	}
+	
+	public List<Client> LireByIdConseiller(long idConseiller){
+		return clientDao.LireByIdConseiller(idConseiller);
+		}
 
 }
