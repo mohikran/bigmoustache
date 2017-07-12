@@ -5,7 +5,7 @@ import java.util.List;
 import com.gtm.dao.IntClientCrudDao;
 import com.gtm.domaine.Client;
 
-public interface IntClientCrudService {
+public interface IntClientCrudService extends IntGenericCrudService<Client>{
 
 	IntClientCrudDao getDao();
 
