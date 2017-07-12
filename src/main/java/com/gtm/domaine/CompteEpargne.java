@@ -1,5 +1,8 @@
 package com.gtm.domaine;
 
+import javax.persistence.Entity;
+
+@Entity
 public class CompteEpargne extends Compte {
 	
 	private int tauxDeRenumeration;
@@ -26,4 +29,11 @@ public class CompteEpargne extends Compte {
 		this.tauxDeRenumeration = tauxDeRenumeration;
 	}
 
+	@Override
+	public String toString() {
+		return "CompteEpargne [ " + getIdCompte() + ", " + getSolde()
+				+ ", " +  tauxDeRenumeration + "]";
+	}
+
+	
 }

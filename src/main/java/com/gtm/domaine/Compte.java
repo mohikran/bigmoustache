@@ -1,14 +1,20 @@
 package com.gtm.domaine;
 
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 
+@Entity
 public abstract class Compte {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long idCompte;
+	private long id;
 	private long solde;
 	
 	public Compte(long solde) {
@@ -29,7 +35,7 @@ public abstract class Compte {
 	}
 
 	public long getIdCompte() {
-		return idCompte;
+		return id;
 	}
 
 }

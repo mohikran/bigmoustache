@@ -1,31 +1,34 @@
 package com.gtm.domaine;
 
-import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
 
 @Entity
 public class Conseiller {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int idConseiller;
+	private int id;
 	private String nom;
 	private String prenom;
 	private String password,login;
-	private ArrayList<Client> listeClients;
+
 	
 	
-	public Conseiller(String nom, String prenom, String password, String login, ArrayList<Client> listeClients) {
+	public Conseiller(String nom, String prenom, String password, String login) {
 		super();
 		this.nom = nom;
 		this.prenom = prenom;
 		this.password = password;
 		this.login = login;
-		this.listeClients = listeClients;
 	}
 
 
@@ -35,7 +38,7 @@ public class Conseiller {
 	
 	
 	public int getIdConseiller() {
-		return idConseiller;
+		return id;
 	}
 
 
@@ -79,14 +82,13 @@ public class Conseiller {
 	}
 
 
-	public ArrayList<Client> getListeClients() {
-		return listeClients;
+	@Override
+	public String toString() {
+		return "Conseiller [" + id + ", " + nom + ", " + prenom + ", " + password + ", "
+				+ login + " ]";
 	}
 
 
-	public void setListeClients(ArrayList<Client> listeClients) {
-		this.listeClients = listeClients;
-	}
 	
 	
 	

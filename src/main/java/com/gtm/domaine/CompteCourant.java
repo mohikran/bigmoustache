@@ -1,7 +1,11 @@
 package com.gtm.domaine;
 
+import javax.persistence.Entity;
+
+@Entity
 public class CompteCourant extends Compte{
 	
+
 	private long plafondDeDecouvert;
 
 	public CompteCourant(long solde) {
@@ -25,9 +29,14 @@ public class CompteCourant extends Compte{
 	public void setPlafondDeDecouvert(long plafondDeDecouvert) {
 		this.plafondDeDecouvert = plafondDeDecouvert;
 	}
+
+	@Override
+	public String toString() {
+		return "CompteCourant [ " + getIdCompte() + ", " + getSolde()
+				+ ", " + plafondDeDecouvert  + "]";
+	}
 	
-	
-	
+
 	
 	
 	

@@ -1,21 +1,28 @@
 package com.gtm.domaine;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
 
 @Entity
+@NamedQuery(name = "Client.LireByIdConseiller", query = "select c From Client c where c.idConseiller=?1")
 public class Client {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long idClient;
+	private long id;
 	private String nom;
 	private String prenom;
 	private String adresse;
 	private String email;
+	@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
 	private CompteCourant compteCourant;
+	@OneToOne(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
 	private CompteEpargne compteEpargne;
 	private long idConseiller;
 
@@ -31,6 +38,22 @@ public class Client {
 		this.compteEpargne = compteEpargne;
 		this.idConseiller = idConseiller;
 	}
+	
+
+	public Client(long id, String nom, String prenom, String adresse, String email, CompteCourant compteCourant,
+			CompteEpargne compteEpargne, long idConseiller) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.adresse = adresse;
+		this.email = email;
+		this.compteCourant = compteCourant;
+		this.compteEpargne = compteEpargne;
+		this.idConseiller = idConseiller;
+	}
+
+
 
 
 	public Client() {
@@ -39,7 +62,7 @@ public class Client {
 	
 	
 	public long getIdClient() {
-		return idClient;
+		return id;
 	}
 
 
@@ -115,9 +138,9 @@ public class Client {
 
 	@Override
 	public String toString() {
-		return "Client [nom=" + nom + ", prenom=" + prenom + ", adresse=" + adresse + ", email=" + email
-				+ ", compteCourant=" + compteCourant + ", compteEpargne=" + compteEpargne + ", idConseiller="
-				+ idConseiller + "]";
+		return "Client [ " + id + ", " + nom + ", " + prenom + ", " + adresse + ", " + email
+				+ ", " + compteCourant + ", " + compteEpargne + ", "
+				+ idConseiller + " ]";
 	}
 	
 	
