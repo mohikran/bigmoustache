@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<h:outputStylesheet library="css" name="config.css" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Login Page</title>
+</h:head>
+<h:body>
+	<ui:composition template="template.xhtml">
+
+		<ui:define name="content">
+
+
+
+
+
+			<div class="ui-g-2"></div>
+			<div class="ui-g-8">
+
+				<h:form>
+					<p:panel id="panelcreation" header="Creation d'un conseiller">
+
+
+						<h:panelGrid columns="3" columnClasses="titleCell">
+
+
+							<h:outputLabel for="Nom" value="Nom : " />
+							<h:inputText id="Nom" value="#{conseillerBean.conseiller.nom}" />
+							<h:message for="Nom" errorClass="invalid" />
+
+							<h:outputLabel for="Prenom" value="Prenom : " />
+							<h:inputText id="Prenom" value="#{conseillerBean.conseiller.prenom}" />
+							<h:message for="Prenom" errorClass="invalid" />
+
+							<h:outputLabel for="Adresse" value="Login : " />
+							<h:inputText id="Adresse" value="#{conseillerBean.conseiller.login}" />
+							<h:message for="Adresse" errorClass="invalid" />
+
+							<h:outputLabel for="Email" value="password : " />
+							<h:inputText id="Email" value="#{conseillerBean.conseiller.password}" />
+							<h:message for="Email" errorClass="invalid" />
+
+							
+
+						</h:panelGrid>
+
+						<p:commandButton id="register" action="#{conseillerBean.addConseiller}"
+							value="Enregistrer le conseiller" icon="ui-icon-check" />
+
+
+						
+					</p:panel>
+				</h:form>
+
+			</div>
+			<div class="ui-g-2"></div>
+
+
+		</ui:define>
+
+	</ui:composition>
+</h:body>
+</html>

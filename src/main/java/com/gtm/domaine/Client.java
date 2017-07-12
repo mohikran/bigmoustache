@@ -15,7 +15,7 @@ public class Client {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long id;
+	private int id;
 	private String nom;
 	private String prenom;
 	private String adresse;
@@ -40,7 +40,7 @@ public class Client {
 	}
 	
 
-	public Client(long id, String nom, String prenom, String adresse, String email, CompteCourant compteCourant,
+	public Client(int id, String nom, String prenom, String adresse, String email, CompteCourant compteCourant,
 			CompteEpargne compteEpargne, long idConseiller) {
 		super();
 		this.id = id;
@@ -61,7 +61,7 @@ public class Client {
 	}
 	
 	
-	public long getIdClient() {
+	public int getIdClient() {
 		return id;
 	}
 

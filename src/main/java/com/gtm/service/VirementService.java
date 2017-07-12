@@ -11,9 +11,9 @@ public class VirementService {
 
 	private final static Logger log = Logger.getLogger(VirementService.class);
 
-	public boolean EffectuerVirement(CompteCourant compteDebite, Compte compteCredite, long montant) throws SaisieException{
+	/*public boolean EffectuerVirement(CompteCourant compteDebite, Compte compteCredite, long montant) throws SaisieException{
 		if(montant>(compteDebite.getSolde()+compteDebite.getPlafondDeDecouvert()))throw SaisieException("Le solde du compte "
-				+ "débité n'est pas assez élevé pour effectuer ce virement")
+				+ "débité n'est pas assez élevé pour effectuer ce virement");
 		else{long SoldeCD = compteDebite.getSolde();
 			long SoldeCC = compteCredite.getSolde();
 			compteDebite.setSolde(SoldeCD - montant);
@@ -21,11 +21,11 @@ public class VirementService {
 			log.info("Virement [Numero CompteDébité = " + compteDebite.getIdCompte() + ", Numero CompteCrédité = " + 
 			compteCredite.getIdCompte() + ", Montant = " + montant + ", Nouveau solde du CompteDébité = "
 			+ compteDebite.getSolde() + " €, Nouveau solde du Compte Crédité = " +compteCredite.getSolde() +" € ]" );
-		}
-		
-		public boolean EffectuerVirement(CompteEpargne compteDebite, Compte compteCredite, long montant) throws SaisieException{
+		}}
+
+	public boolean EffectuerVirement(CompteEpargne compteDebite, Compte compteCredite, long montant) throws SaisieException{
 			if(montant>compteDebite.getSolde())throw SaisieException("Le solde du compte "
-					+ "débité n'est pas assez élevé pour effectuer ce virement")
+					+ "débité n'est pas assez élevé pour effectuer ce virement");
 			else{long SoldeCD = compteDebite.getSolde();
 				long SoldeCC = compteCredite.getSolde();
 				compteDebite.setSolde(SoldeCD - montant);
@@ -35,5 +35,5 @@ public class VirementService {
 				+ compteDebite.getSolde() + " €, Nouveau solde du Compte Crédité = " +compteCredite.getSolde() +" € ]" );
 			}
 		
-	}
+	}*/
 }

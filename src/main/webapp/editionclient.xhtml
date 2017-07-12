@@ -12,55 +12,58 @@
 	<title>Login Page</title>
 </h:head>
 <h:body>
-	<ui:composition template="template2.xhtml">
+	<ui:composition template="template.xhtml">
 
 		<ui:define name="content">
 
 			<div class="ui-g-2"></div>
 			<div class="ui-g-8">
 				<h:form>
-					<p:panel id="editionclient" header="EditionCLient">
+					<p:panel id="editionclient" header="Edition Client">
 
 						<p:messages id="msgs" />
 
 						<h:panelGrid columns="3" cellpadding="5">
 							<p:outputLabel for="Nom" value="Nom : " />
-							<p:inputText id="Nom" value="Nom">
+							<p:inputText id="Nom" value="#{clientBean.client.nom}">
 							</p:inputText>
 							<p:message for="Nom" display="icon" />
 
 							<p:outputLabel for="Prenom" value="Prenom : " />
-							<p:inputText id="Prenom" value="Prenom">
+							<p:inputText id="Prenom" value="#{clientBean.client.prenom}">
 							</p:inputText>
 							<p:message for="Prenom" display="icon" />
 
 							<p:outputLabel for="Adresse" value="Adresse : " />
-							<p:inputText id="Adresse" value="Adresse">
+							<p:inputText id="Adresse" value="#{clientBean.client.adresse}">
 							</p:inputText>
 							<p:message for="Adresse" display="icon" />
 
 							<p:outputLabel for="Email" value="Email : " />
-							<p:inputText id="Email" value="Email">
+							<p:inputText id="Email" value="#{clientBean.client.email}">
 							</p:inputText>
 							<p:message for="Email" display="icon" />
 
 							<p:outputLabel for="CompteCourant"
-								value="Ajout d'un compte courant : " />
-							<p:inputText id="CompteCourant" value="Solde">
+								value="Solde du CompteCourant  " />
+							<p:inputText id="CompteCourant"
+								value="#{clientBean.client.compteCourant.solde}">
 							</p:inputText>
 							<p:message for="CompteCourant" display="icon" />
 
+
 							<p:outputLabel for="CompteEpargne"
-								value="Ajout d'un compte Epargne : " />
-							<p:inputText id="CompteEpargne" value="Solde">
+								value="Solde du compte epargne : " />
+							<p:inputText id="CompteEpargne"
+								value="#{clientBean.client.compteEpargne.solde}">
 							</p:inputText>
 							<p:message for="CompteEpargne" display="icon" />
 
 						</h:panelGrid>
 
-						<p:commandButton  value="Enregistrer les modifications" action="aucune"
-							icon="ui-icon-check" />
-						<p:commandButton  value="Supprimer le client" action="aucune"
+						<p:commandButton value="Enregistrer les modifications"
+							action="#{clientBean.updateClient}" icon="ui-icon-check" />
+						<p:commandButton value="Supprimer le client" action="#{clientBean.removeClient}"
 							icon="ui-icon-check" />
 					</p:panel>
 				</h:form>

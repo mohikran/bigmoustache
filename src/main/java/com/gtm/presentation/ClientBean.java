@@ -15,10 +15,8 @@ import com.gtm.service.IntClientCrudService;
 @SessionScoped
 public class ClientBean implements Serializable {
 
-	
-	
 	@Inject
-	//IntClientCrudDao clientService;
+	// IntClientCrudDao clientService;
 	IntClientCrudService clientservice;
 	/**
 	 * 
@@ -40,27 +38,35 @@ public class ClientBean implements Serializable {
 		this.client = client;
 	}
 
-	// Crée instanciation client
+	// Cree instanciation client
 	public ClientBean() {
 		client = new Client();
 	}
 
 	public List<Client> getListeClient() {
 		System.out.println("Debut de la getListeClient");
-		List<Client> ListeClient= null; //= ctest.clientList(); // Pas encore de service
+		List<Client> ListeClient = null;
 		ListeClient = clientservice.lireTous();
-		//ListeClient = clientService.lireTous();
 		return ListeClient;
 
 	}
 
-	public void addClient() {
+	public String addClient() {
 		System.out.println("addClient bean");
-		// APPEL DU SERVICE en utilisant client en parametre
+		clientservice.sauverEnBase(client);
+		return "liste";
 	}
 
-	public void removeClient() {
+	public String removeClient() {
 		System.out.println("RemoveClient bean");
-		// APPEL DU SERVICE en utilisant client en parametre
+		clientservice.supprimer(client.getIdClient());
+		return "liste";
 	}
+	public String updateClient() {
+		System.out.println("RemoveClient bean");
+		clientservice.modifier(client);
+		return "liste";
+	}
+	
+	
 }

@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.gtm.dao.ClientCrudDao;
@@ -76,7 +77,7 @@ public class Test1 {
 		compteDao = null;
 		conseillerDao = null;
 	}
-	
+	@Ignore
 	@Test
 	public void testLectureClient() {
 		System.out.println(compteCClient1);
