@@ -7,7 +7,6 @@
 		<class>com.gtm.domaine.Client</class>
 		<class>com.gtm.domaine.Compte</class>
 		<class>com.gtm.domaine.Conseiller</class>
-		<class>com.gtm.domaine.Gerant</class>
 
 		<class>com.gtm.domaine.CompteCourant</class>
 		<class>com.gtm.domaine.CompteEpargne</class>
