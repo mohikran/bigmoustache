@@ -16,10 +16,41 @@
 
 		<ui:define name="content">
 
-			Page de liste
-			<div class="ui-g-2">Gauche de la page</div>
-			<div class="ui-g-8" id="contour">Ceci est le centre de la page</div>
-			<div class="ui-g-2">Droite de la page</div>
+			<div class="ui-g-2"></div>
+			<div class="ui-g-8" id="contourliste">
+				<h:form>
+					<p:dataTable id="tablelisteclient" var="variable"
+						value="valuebean">
+						<p:column headerText="Nom">
+							<h:outputText value="nom" />
+						</p:column>
+
+						<p:column headerText="Prenom">
+							<h:outputText value="Prenom" />
+						</p:column>
+
+						<p:column headerText="CompteCourant">
+							<h:outputText value="CompteCourant" />
+						</p:column>
+						<p:column headerText="CompteEpargne">
+							<h:outputText value="#CompteEpargne" />
+						</p:column>
+						
+
+						<p:column headerText="Afficher Client">
+							<p:commandButton value="Afficher Client"
+								action="aucune">
+<!-- 								<f:setPropertyActionListener target="#{personneBeans.personne}" -->
+<!-- 									value="#{personne}" /> -->
+							</p:commandButton>
+						</p:column>
+						
+
+
+					</p:dataTable>
+				</h:form>
+			</div>
+			<div class="ui-g-2"></div>
 
 
 		</ui:define>

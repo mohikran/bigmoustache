@@ -6,17 +6,42 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
-<h:outputStylesheet library="css" name="config.css" />
+	<h:outputStylesheet library="css" name="config.css" />
 
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Login Page</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Login Page</title>
 </h:head>
 <h:body>
 	<ui:composition template="template2.xhtml">
 
 		<ui:define name="content">
 
-			Page de login
+			<div class="ui-g-2"></div>
+			<div class="ui-g-8">
+				<h:form>
+					<p:panel id="panellogin" header="Login">
+
+						<p:messages id="msgs" />
+
+						<h:panelGrid columns="3" cellpadding="5">
+							<p:outputLabel for="Login" value="Login:" />
+							<p:inputText id="Login" value="Login">
+							</p:inputText>
+							<p:message for="Login" display="icon" />
+
+							<p:outputLabel for="Password" value="Password : " />
+							<p:inputText id="Password" value="Password" >
+							</p:inputText>
+							<p:message for="Password" display="icon" />
+
+						</h:panelGrid>
+
+						<p:commandButton id ="submitlogin" value="Submit" action="aucune"
+							icon="ui-icon-check" />
+					</p:panel>
+				</h:form>
+			</div>
+			<div class="ui-g-2"></div>
 
 
 		</ui:define>

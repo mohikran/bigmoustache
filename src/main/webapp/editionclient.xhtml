@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<h:outputStylesheet library="css" name="config.css" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Login Page</title>
+</h:head>
+<h:body>
+	<ui:composition template="template2.xhtml">
+
+		<ui:define name="content">
+
+			<div class="ui-g-2"></div>
+			<div class="ui-g-8">
+				<h:form>
+					<p:panel id="editionclient" header="EditionCLient">
+
+						<p:messages id="msgs" />
+
+						<h:panelGrid columns="3" cellpadding="5">
+							<p:outputLabel for="Nom" value="Nom : " />
+							<p:inputText id="Nom" value="Nom">
+							</p:inputText>
+							<p:message for="Nom" display="icon" />
+
+							<p:outputLabel for="Prenom" value="Prenom : " />
+							<p:inputText id="Prenom" value="Prenom">
+							</p:inputText>
+							<p:message for="Prenom" display="icon" />
+
+							<p:outputLabel for="Adresse" value="Adresse : " />
+							<p:inputText id="Adresse" value="Adresse">
+							</p:inputText>
+							<p:message for="Adresse" display="icon" />
+
+							<p:outputLabel for="Email" value="Email : " />
+							<p:inputText id="Email" value="Email">
+							</p:inputText>
+							<p:message for="Email" display="icon" />
+
+							<p:outputLabel for="CompteCourant"
+								value="Ajout d'un compte courant : " />
+							<p:inputText id="CompteCourant" value="Solde">
+							</p:inputText>
+							<p:message for="CompteCourant" display="icon" />
+
+							<p:outputLabel for="CompteEpargne"
+								value="Ajout d'un compte Epargne : " />
+							<p:inputText id="CompteEpargne" value="Solde">
+							</p:inputText>
+							<p:message for="CompteEpargne" display="icon" />
+
+						</h:panelGrid>
+
+						<p:commandButton  value="Enregistrer les modifications" action="aucune"
+							icon="ui-icon-check" />
+						<p:commandButton  value="Supprimer le client" action="aucune"
+							icon="ui-icon-check" />
+					</p:panel>
+				</h:form>
+			</div>
+			<div class="ui-g-2"></div>
+
+
+		</ui:define>
+
+	</ui:composition>
+</h:body>
+</html>

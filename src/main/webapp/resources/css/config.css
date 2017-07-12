@@ -1,11 +1,11 @@
 @CHARSET "ISO-8859-1";
 
-
-
-
 #copyright {
-	min-height: 40px;
+	height: 40px;
+	width: 100%;
 	background-color: #000000;
+	position: fixed;
+	bottom: 0px;
 }
 
 #copyright p {
@@ -15,10 +15,45 @@
 	margin-bottom: 0px;
 }
 
-#contour{ height: 100px;
-    width: 500px;
-    border: 5px solid gray;}
+#contour {
+	height: 100px;
+	width: 500px;
+	border: 5px solid gray;
+}
 
-#banniere{width:50%}
+#banniere {
+	width: 50%
+}
 
-#foot{color:white; text-align: center}
+#foot {
+	color: white;
+	text-align: center
+}
+
+#panellogin {
+	border: 1px solid #000000;
+	background: #03A9F4
+		-webkit-gradient(linear, left top, left bottom, from(#03A9F4),
+		to(rgba(255, 255, 255, 0)));
+}
+
+button#submitlogin {
+	background: #31a524
+		-webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255,
+		0.8)), to(rgba(255, 255, 255, 0)));
+}
+button#j_idt14:submitlogin.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left {
+	background: #31a524
+		-webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255,
+		0.8)), to(rgba(255, 255, 255, 0)));
+}
+
+
+#contourliste{
+	 padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+
+#bandemenu{color:white;}
