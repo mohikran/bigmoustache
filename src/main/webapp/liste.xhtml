@@ -30,18 +30,18 @@
 						</p:column>
 
 						<p:column headerText="CompteCourant">
-							<h:outputText value="#{client.compteCourant}" />
+							<h:outputText value="#{client.compteCourant.solde}" />
 						</p:column>
 						<p:column headerText="CompteEpargne">
-							<h:outputText value="#{client.compteEpargne}" />
+							<h:outputText value="#{client.compteEpargne.solde}" />
 						</p:column>
 						
 
-						<p:column headerText="Afficher Client">
+						<p:column headerText="">
 							<p:commandButton value="Afficher Client"
-								action="aucune">
-<!-- 								<f:setPropertyActionListener target="#{personneBeans.personne}" -->
-<!-- 									value="#{personne}" /> -->
+								action="editionclient">
+								<f:setPropertyActionListener target="#{clientBean.client}"
+									value="#{client}" />
 							</p:commandButton>
 						</p:column>
 						
