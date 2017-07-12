@@ -3,10 +3,23 @@ package com.gtm.presentation;
 import java.io.Serializable;
 import java.util.List;
 
-import com.gtm.domaine.Client;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
 
+import com.gtm.dao.IntClientCrudDao;
+import com.gtm.domaine.Client;
+import com.gtm.service.IntClientCrudService;
+
+@Named
+@SessionScoped
 public class ClientBean implements Serializable {
 
+	
+	
+	@Inject
+	//IntClientCrudDao clientService;
+	IntClientCrudService clientservice;
 	/**
 	 * 
 	 */
@@ -34,7 +47,9 @@ public class ClientBean implements Serializable {
 
 	public List<Client> getListeClient() {
 		System.out.println("Debut de la getListeClient");
-		List<Client> ListeClient = ctest.clientList(); // Pas encore de service
+		List<Client> ListeClient= null; //= ctest.clientList(); // Pas encore de service
+		ListeClient = clientservice.lireTous();
+		//ListeClient = clientService.lireTous();
 		return ListeClient;
 
 	}
