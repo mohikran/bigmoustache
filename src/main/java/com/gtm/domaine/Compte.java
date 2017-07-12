@@ -8,15 +8,23 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-
+/**
+ * 
+ * Classe abstraire domaine Compte avec ses parametres, constructeurs getters et setters
+ * 
+ *
+ */
 @Entity
 public abstract class Compte {
-	
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private long id;
 	private long solde;
-	
+	/**
+	 * 
+	 * @param solde Fixe lors de la creation du compte
+	 */
 	public Compte(long solde) {
 		super();
 		this.solde = solde;

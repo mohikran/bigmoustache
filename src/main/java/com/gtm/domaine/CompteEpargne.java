@@ -1,7 +1,12 @@
 package com.gtm.domaine;
 
 import javax.persistence.Entity;
-
+/**
+ * 
+ * Classe  domaine CompteEpargne, herite de Compte 
+ *  Attribut tauxDeRemuneration caracteristique de cette classe, fixe a 3
+ * Est utilise dans le Dao et appelé par Hibernate comme entite
+ */
 @Entity
 public class CompteEpargne extends Compte {
 	

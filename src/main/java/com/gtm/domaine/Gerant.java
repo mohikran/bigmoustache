@@ -6,7 +6,11 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
-
+/**
+ * Classe domaine gerant, herite de Conseiller 
+ * 
+ * 
+ */
 public class Gerant extends Conseiller {
 	
 	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)

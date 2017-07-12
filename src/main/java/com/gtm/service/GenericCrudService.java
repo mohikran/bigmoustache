@@ -10,7 +10,13 @@ import javax.persistence.criteria.CriteriaQuery;
 
 
 import com.gtm.dao.IntGenericCrudDao;
-
+/**
+ * 
+ * 
+ * Implementation  de l'interface IntGenericCrudService pour les objets de type Client
+ * @param <T> T pour Objet generique, en pratique les objets utilises seront  de Type Compte, Client ou Conseiller
+ *
+ */
 public abstract class GenericCrudService<T> implements IntGenericCrudService<T> {
 	
 /* (non-Javadoc)
@@ -22,6 +28,7 @@ public abstract IntGenericCrudDao<T> getDao();
 	/* (non-Javadoc)
 	 * @see com.gtm.service.IntGenericCrudService#sauverEnBase(T)
 	 */
+
 	public T sauverEnBase(T input){
 		getDao().sauverEnBase(input);
 		return input;

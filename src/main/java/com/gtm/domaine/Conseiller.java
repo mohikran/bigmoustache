@@ -10,7 +10,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-
+/**
+ * Classe domaine conseiller avec ses parametres, constructeurs getters et setters
+ * Est utilise dans le Dao et appelé par Hibernate comme entite
+ * 
+ */
 @Entity
 public class Conseiller {
 
@@ -22,7 +26,13 @@ public class Conseiller {
 	private String password,login;
 
 	
-	
+	/**
+	 * Constructeur 
+	 * @param nom Nom du Conseiller
+	 * @param prenom Prenom du Conseiller
+	 * @param password Password du Conseiller
+	 * @param login Login du Conseiller 
+	 */
 	public Conseiller(String nom, String prenom, String password, String login) {
 		super();
 		this.nom = nom;
