@@ -1,32 +1,37 @@
 package com.gtm.service;
 
-import java.util.ArrayList;
+
+import java.io.Serializable;
 import java.util.List;
 
+import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
+import javax.inject.Named;
 
-import com.gtm.dao.ClientCrudDao;
 import com.gtm.dao.IntClientCrudDao;
-import com.gtm.dao.IntGenericCrudDao;
+
 import com.gtm.domaine.Client;
 
-
-public class ClientCrudService extends GenericCrudService<Client> {
+@Named
+@SessionScoped
+public class ClientCrudService extends GenericCrudService<Client> implements Serializable, IntClientCrudService {
 	
 	@Inject
-	private ClientCrudDao clientDao;
+	private IntClientCrudDao clientDao;
 	
+	/* (non-Javadoc)
+	 * @see com.gtm.service.IntClientCrudService#getDao()
+	 */
 	@Override
-	public ClientCrudDao getDao(){
+	public IntClientCrudDao getDao(){
 		return clientDao;
 	}
 	
+	/* (non-Javadoc)
+	 * @see com.gtm.service.IntClientCrudService#LireByIdConseiller(long)
+	 */
 	public List<Client> LireByIdConseiller(long idConseiller){
 		return clientDao.LireByIdConseiller(idConseiller);
-		}
+	}
 
 }
