@@ -111,6 +111,14 @@ public class Client {
 	public void setIdConseiller(long idConseiller) {
 		this.idConseiller = idConseiller;
 	}
+
+
+	@Override
+	public String toString() {
+		return "Client [nom=" + nom + ", prenom=" + prenom + ", adresse=" + adresse + ", email=" + email
+				+ ", compteCourant=" + compteCourant + ", compteEpargne=" + compteEpargne + ", idConseiller="
+				+ idConseiller + "]";
+	}
 	
 	
 		

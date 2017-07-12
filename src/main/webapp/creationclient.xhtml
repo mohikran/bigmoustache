@@ -24,7 +24,7 @@
 			<div class="ui-g-8">
 
 				<h:form>
-					<p:panel id="panelcreation" header="creation d'un client">
+					<p:panel id="panelcreation" header="Creation d'un client">
 
 
 						<h:panelGrid columns="3" columnClasses="titleCell">
@@ -56,21 +56,14 @@
 							<h:inputText id="CompteEpargne" value="Solde" />
 							<h:message for="CompteEpargne" errorClass="invalid" />
 
-
-
-							<h:commandButton id="register" action="en attente"
-								value="Enregistrer le client" styleClass="register" />
-
-
 						</h:panelGrid>
-<!-- 						<p> -->
-<!-- 							<h:panelGrid columns="2"> -->
-<!-- 								<h:commandButton id="register" action="en attente" -->
-<!-- 									value="Enregistrer le client" styleClass="register" /> -->
-<!-- 								<h:messages styleClass="messages" errorClass="invalid" -->
-<!-- 									infoClass="valid" warnClass="warning" globalOnly="true" /> -->
-<!-- 							</h:panelGrid> -->
-<!-- 						</p> -->
+
+						<p:commandButton id="register" action="en attente"
+							value="Enregistrer le client" icon="ui-icon-check" />
+
+
+<!-- 					<p:commandButton id="submitlogin" value="Submit" action="aucune" -->
+<!-- 							icon="ui-icon-check" /> -->
 					</p:panel>
 				</h:form>
 

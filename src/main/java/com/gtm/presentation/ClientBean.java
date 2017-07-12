@@ -15,6 +15,8 @@ public class ClientBean implements Serializable {
 	// Client domaine
 	private Client client;
 
+	private classetest ctest = new classetest();
+
 	// Getter client
 	public Client getClient() {
 		return client;
@@ -26,13 +28,13 @@ public class ClientBean implements Serializable {
 	}
 
 	// Crée instanciation client
-	public void ClientBeans() {
+	public ClientBean() {
 		client = new Client();
 	}
 
 	public List<Client> getListeClient() {
 		System.out.println("Debut de la getListeClient");
-		List<Client> ListeClient = null; // Pas encore de service
+		List<Client> ListeClient = ctest.clientList(); // Pas encore de service
 		return ListeClient;
 
 	}

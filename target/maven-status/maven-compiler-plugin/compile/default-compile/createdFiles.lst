@@ -1,3 +1,12 @@
 com\gtm\dao\Exemple.class
-com\gtm\presentation\Exemple.class
+com\gtm\presentation\classetest.class
+com\gtm\presentation\launcher.class
+com\gtm\domaine\Conseiller.class
 com\gtm\service\Exemple.class
+com\gtm\presentation\ClientBean.class
+com\gtm\domaine\CompteEpargne.class
+com\gtm\domaine\Compte.class
+com\gtm\domaine\CompteCourant.class
+com\gtm\domaine\Gerant.class
+com\gtm\presentation\ConseillerBean.class
+com\gtm\domaine\Client.class

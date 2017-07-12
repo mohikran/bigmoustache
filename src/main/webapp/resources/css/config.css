@@ -1,18 +1,13 @@
 @CHARSET "ISO-8859-1";
 
+
+
 #copyright {
 	height: 40px;
 	width: 100%;
 	background-color: #000000;
 	position: fixed;
 	bottom: 0px;
-}
-
-#copyright p {
-	text-align: left;
-	color: #FFF;
-	padding: 10px 0;
-	margin-bottom: 0px;
 }
 
 #contour {
@@ -22,7 +17,8 @@
 }
 
 #banniere {
-	width: 50%
+	margin-left: 45%;
+	width: 50%;
 }
 
 #foot {
@@ -42,18 +38,109 @@ button#submitlogin {
 		-webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255,
 		0.8)), to(rgba(255, 255, 255, 0)));
 }
-button#j_idt14:submitlogin.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left {
+
+/* ==================================PAGE LOGIN===================================== */
+
+
+/* Background panel*/
+
+div#j_idt14\:panellogin.ui-panel.ui-widget.ui-widget-content.ui-corner-all
+	{
+	border: 1px solid #000000;
+	background: #cacaca;
+}
+/* Header panel*/
+
+div#j_idt14\:panellogin_header.ui-panel-titlebar.ui-widget-header.ui-helper-clearfix.ui-corner-all
+	{
+	border: 1px solid #000000;
+	background: rgb(53, 178, 234);
+}
+/* Submit button panel*/
+
+button#j_idt14\:submitlogin.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left
+	{
 	background: #31a524
 		-webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255,
 		0.8)), to(rgba(255, 255, 255, 0)));
 }
 
 
-#contourliste{
-	 padding-top: 50px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    padding-left: 80px;
+/* =================================PAGE Creation Client =================================*/
+
+/* Background panel*/
+div#j_idt18\:panelcreation.ui-panel.ui-widget.ui-widget-content.ui-corner-all{
+	border: 1px solid #000000;
+	background: #cacaca;
 }
 
-#bandemenu{color:white;}
+
+/* Header panel*/
+
+div#j_idt18\:panelcreation_header.ui-panel-titlebar.ui-widget-header.ui-helper-clearfix.ui-corner-all{
+	border: 1px solid #000000;
+	background: rgb(53, 178, 234);
+	    text-shadow: 0;
+}
+
+
+/* Submit button panel*/
+button#j_idt18\:register.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left{
+	background: #31a524
+ -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255,
+ 0.8)), to(rgba(255, 255, 255, 0)));
+} 
+
+/* Header pannel*/
+
+div#j_idt14\:editionclient_header.ui-panel-titlebar.ui-widget-header.ui-helper-clearfix.ui-corner-all{
+	border: 1px solid #000000;
+	background: rgb(53, 178, 234);
+	text-shadow: 0;
+}
+
+
+
+/*======================Page edition Client*/
+/* Bouton validation*/
+button#j_idt14\:j_idt28.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left{
+	background: #31a524
+ -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255,
+ 0.8)), to(rgba(255, 255, 255, 0)));
+} 
+/* Bouton supression*/
+
+button#j_idt14\:j_idt29.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left{
+	background: #de4312    -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255,   0.8)), to(rgba(255, 255, 255, 0)));
+} 
+
+/*Header panel */
+div#j_idt14\:editionclient_header.ui-panel-titlebar.ui-widget-header.ui-helper-clearfix.ui-corner-all{
+	border: 1px solid #000000;
+	background: rgb(53, 178, 234);
+	text-shadow: 0;
+}
+
+
+/*Background*/
+div#j_idt14\:editionclient_content.ui-panel-content.ui-widget-content{
+	border: 1px solid #000000;
+	background: #cacaca;
+}
+
+
+
+#contourliste {
+	padding-top: 50px;
+	padding-right: 30px;
+	padding-bottom: 50px;
+	padding-left: 80px;
+}
+
+#bandemenu {
+	color: white;
+}
+
+#navbarhead {
+	color: white;
+}
