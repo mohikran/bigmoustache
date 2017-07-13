@@ -11,6 +11,7 @@ import com.gtm.domaine.Client;
 import com.gtm.domaine.Compte;
 import com.gtm.service.IntClientCrudService;
 import com.gtm.service.IntCompteCrudService;
+import com.gtm.service.VirementService;
 
 @Named
 @SessionScoped
@@ -19,6 +20,9 @@ public class CompteBean implements Serializable {
 	private Compte compte;
 	@Inject
 	IntCompteCrudService compteservice;
+	
+	@Inject
+	VirementService virementservice;
 
 	//Getter Compte
 	public Compte getCompte() {
