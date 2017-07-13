@@ -151,6 +151,7 @@ public class ClientBean implements Serializable {
 
 	public String removeClient() {
 		System.out.println("RemoveClient bean");
+
 		clientservice.supprimer(client.getIdClient());
 		return "listeclient";
 	}
@@ -163,25 +164,27 @@ public class ClientBean implements Serializable {
 	public String updateClient() {
 
 		if (checkcourant == true) {
-			compteCourant = new CompteCourant(soldeCourant);
-		} else {
 			compteService.supprimer(client.getCompteCourant().getIdCompte());
 			compteCourant = null;
-		}
-		if (checkepargne == true) {
-			compteEpargne = new CompteEpargne(soldeEpargne);
-		} else {
+			Client clientsaved = new Client(client.getIdClient(), client.getNom(), client.getPrenom(),
+					client.getAdresse(), client.getEmail(), compteCourant, compteEpargne, client.getIdConseiller());
+			clientservice.modifier(clientsaved);
+
+		} else if (checkepargne == true) {
 			compteService.supprimer(client.getCompteEpargne().getIdCompte());
 
+			compteCourant = client.getCompteCourant();
 			compteEpargne = null;
+			Client clientsaved = new Client(client.getIdClient(), client.getNom(), client.getPrenom(),
+					client.getAdresse(), client.getEmail(), compteCourant, compteEpargne, client.getIdConseiller());
+			clientservice.modifier(clientsaved);
+
 		}
 
-		Client clientsaved = new Client(client.getIdClient(),client.getNom(), client.getPrenom(), client.getAdresse(), client.getEmail(),
-				compteCourant, compteEpargne, client.getIdConseiller());
+		else {
+			clientservice.modifier(client);
+		}
 
-		clientservice.modifier(clientsaved);
-
-		// clientservice.modifier(client);
 		return "listeclient";
 	}
 

@@ -1,21 +1,23 @@
 package com.gtm.domaine;
 
 import javax.persistence.Entity;
+
 /**
  * 
- * Classe  domaine CompteCourant, herite de Compte 
- *  Attribut plafondDecouvert caracteristique de cette classe, fixe a 1000
- *  Est utilise dans le Dao et appelé par Hibernate comme entite
+ * Classe domaine CompteCourant, herite de Compte Attribut plafondDecouvert
+ * caracteristique de cette classe, fixe a 1000 Est utilise dans le Dao et
+ * appelé par Hibernate comme entite
  */
 @Entity
-public class CompteCourant extends Compte{
-	
+public class CompteCourant extends Compte {
 
 	private long plafondDeDecouvert;
-/**
- * 
- * @param solde Fixe lors de la creation du compte
- */
+
+	/**
+	 * 
+	 * @param solde
+	 *            Fixe lors de la creation du compte
+	 */
 	public CompteCourant(long solde) {
 		super(solde);
 		this.plafondDeDecouvert = 1000;
@@ -40,14 +42,7 @@ public class CompteCourant extends Compte{
 
 	@Override
 	public String toString() {
-		return "CompteCourant [ " + getIdCompte() + ", " + getSolde()
-				+ ", " + plafondDeDecouvert  + "]";
+		return "CompteCourant [ " + getIdCompte() + ", " + getSolde() + ", " + plafondDeDecouvert + "]";
 	}
-	
-
-	
-	
-	
-	
 
 }

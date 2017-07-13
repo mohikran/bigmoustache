@@ -15,7 +15,7 @@ import javax.persistence.InheritanceType;
  *
  */
 @Entity
-public abstract class Compte {
+public  class Compte {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
