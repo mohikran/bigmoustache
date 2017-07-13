@@ -97,6 +97,19 @@ public class Client {
 		this.compteEpargne = compteEpargne;
 		this.idConseiller = idConseiller;
 	}
+	
+	public Client(int id, String nom, String prenom, String adresse, String email, int idConseiller) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.adresse = adresse;
+		this.email = email;
+		this.compteCourant = null;
+		this.compteEpargne = null;
+		this.idConseiller = idConseiller;
+	}
+
 
 	public Client() {
 		super();
