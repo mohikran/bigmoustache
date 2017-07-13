@@ -19,7 +19,7 @@ public abstract class Compte {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private long id;
+	private int id;
 	private long solde;
 	/**
 	 * 
@@ -42,7 +42,7 @@ public abstract class Compte {
 		this.solde = solde;
 	}
 
-	public long getIdCompte() {
+	public int getIdCompte() {
 		return id;
 	}
 
