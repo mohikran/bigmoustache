@@ -29,9 +29,9 @@ public abstract IntGenericCrudDao<T> getDao();
 	 * @see com.gtm.service.IntGenericCrudService#sauverEnBase(T)
 	 */
 
-	public T sauverEnBase(T input){
+	public boolean sauverEnBase(T input){
 		getDao().sauverEnBase(input);
-		return input;
+		return true;
 	}
 
 	/* (non-Javadoc)
@@ -53,17 +53,18 @@ public abstract IntGenericCrudDao<T> getDao();
 	/* (non-Javadoc)
 	 * @see com.gtm.service.IntGenericCrudService#modifier(T)
 	 */
-	public T modifier(T input){
+	public boolean modifier(T input){
 		getDao().modifier(input);
-		return input;
+		return true;
 	}
 	
 
 	/* (non-Javadoc)
 	 * @see com.gtm.service.IntGenericCrudService#supprimer(int)
 	 */
-	public void supprimer(int id){
+	public boolean supprimer(int id){
 		getDao().supprimer(id);
+		return true;
 	}
 }
 

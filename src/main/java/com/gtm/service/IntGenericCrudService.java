@@ -20,7 +20,7 @@ public interface IntGenericCrudService<T> {
  * @param input objet que l on souhaite inserer dans la BDD
  * @return renvoie l objet que l on souhaite sauvegarder
  */
-	T sauverEnBase(T input);
+	boolean sauverEnBase(T input);
 /**
  * Cherche un objet dans une base de donnee a partir de son Id
  * @param id clef primaire de l objet que l on souhaite trouver
@@ -33,8 +33,8 @@ public interface IntGenericCrudService<T> {
  */
 	List<T> lireTous();
 
-	T modifier(T input);
+	boolean modifier(T input);
 
-	void supprimer(int id);
+	boolean supprimer(int id);
 
 }

@@ -4,14 +4,14 @@ import java.util.List;
 
 public interface IntGenericCrudDao<T> {
 
-	T sauverEnBase(T input);
+	boolean sauverEnBase(T input);
 
 	T lireById(int id);
 
 	List<T> lireTous();
 
-	T modifier(T input);
+	boolean modifier(T input);
 
-	void supprimer(int id);
+	boolean supprimer(int id);
 
 }

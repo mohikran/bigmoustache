@@ -35,7 +35,7 @@ public class ClientCrudDao extends GenericCrudDao<Client> implements IntClientCr
 	}
 	
 	@Override
-	public Client sauverEnBase(Client input) {
+	public boolean sauverEnBase(Client input) {
 
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("proxybanque-pu");
 		EntityManager em = emf.createEntityManager();
@@ -53,7 +53,7 @@ public class ClientCrudDao extends GenericCrudDao<Client> implements IntClientCr
 		em.close();
 		emf.close();
 
-		return input;
+		return true;
 	}
 	
 
