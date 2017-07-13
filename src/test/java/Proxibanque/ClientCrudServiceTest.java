@@ -23,15 +23,20 @@ public class ClientCrudServiceTest {
 	
 	private ClientCrudDao clientService;
 	Client client1;
+	Client client2;
 	CompteCourant compteCClient1;
-	CompteEpargne compteEClient1; 
+	CompteCourant compteCClient2;
+	CompteEpargne compteEClient1;
+	int id;
 	
 	@Before
 	public void initialisationDesDonnées(){
 		clientService = new ClientCrudDao();
 		compteCClient1 = new CompteCourant(2000);
 		compteEClient1 = new CompteEpargne(50000);
-		client1 = new Client(1,"Piccini","Alexandre", "5 rue du Grand Boulevard", "APiccini@hotmail.fr", compteCClient1, compteEClient1, 1);
+		compteCClient2 = new CompteCourant(1000);
+		client1 = new Client("Piccini","Alexandre", "5 rue du Grand Boulevard", "APiccini@hotmail.fr", compteCClient1, compteEClient1, 1);
+		client2 = new Client("Dumoulin","Matthieu", "5 petite rue de Monplaisir", "m.dumoulin.ensci@gmail.com", compteCClient2, compteEClient1, 1);
 	}
 	
 	@After
@@ -39,24 +44,27 @@ public class ClientCrudServiceTest {
 		clientService = null;
 		compteCClient1 = null;
 		compteEClient1 = null;
+		compteCClient2 = null;
 		client1 = null;
+		client2 = null;
+		id = 0;
 	}
 		
 	
 	@Test
-	public void testsauverEnBase() {
+	public void testSauverEnBase(){
 		assertTrue(clientService.sauverEnBase(client1));
 		log.info(client1);
 	}
 	
 	@Test
 	public void testLireByIdRetourneUnObjet(){
-		assertNotNull(clientService.lireById(1));
+		assertNotNull(clientService.lireById(id));
 	}
 	
 	@Test
 	public void testLireByIdRetourneUnClient(){
-		assertTrue(clientService.lireById(1) instanceof Client);
+		assertTrue(clientService.lireById(id) instanceof Client);
 	}
 	
 	@Test
@@ -65,8 +73,9 @@ public class ClientCrudServiceTest {
 	}
 	
 	@Test
-	public void testLireByIdConseillerRetourneUnClient(){
-		assertTrue(clientService.LireByIdConseiller(1) instanceof Client);
+	public void testLireByIdConseillerRetourneUneListeClient(){
+		System.out.println(clientService.LireByIdConseiller(1));
+		assertTrue(clientService.LireByIdConseiller(1).get(0) instanceof Client);
 	}
 	
 	@Test
@@ -79,11 +88,20 @@ public class ClientCrudServiceTest {
 		assertFalse(clientService.lireTous().isEmpty());
 	}
 	
-	
+	@Test
+	public void testLireTousRetourneUneListeQuiContientDesClients(){
+		assertTrue(clientService.lireTous().get(0) instanceof Client);
+	}
 	
 	@Test
-	public void testsupprimerClient() {
-		assertTrue(clientService.supprimer(1));
+	public void testModifier(){
+		client1 = client2;
+		assertTrue(clientService.modifier(client1));
+	}
+	
+	@Test
+	public void testSupprimerClient() {
+		assertTrue(clientService.supprimer(id));
 	}
 
 }
