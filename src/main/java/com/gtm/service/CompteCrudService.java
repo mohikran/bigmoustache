@@ -16,8 +16,9 @@ public class CompteCrudService extends GenericCrudService<Compte> implements Ser
 	@Inject
 	private IntCompteCrudDao compteDao;
 	
-	/* (non-Javadoc)
-	 * @see com.gtm.service.IntCompteCrudService#getDao()
+	/**
+	 * Reecriture de la methode getDao() pour retourner la classe CompteCrudDao
+	 * (et pouvoir faire appel aux méthodes)
 	 */
 	@Override
 	public IntCompteCrudDao getDao(){

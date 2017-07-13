@@ -12,6 +12,7 @@ import com.gtm.domaine.CompteCourant;
 import com.gtm.domaine.CompteEpargne;
 import com.gtm.exception.SaisieException;
 
+
 @Named
 @SessionScoped
 public class VirementService implements Serializable{
@@ -30,7 +31,17 @@ public class VirementService implements Serializable{
 //			+ compteDebite.getSolde() + " €, Nouveau solde du Compte Crédité = " +compteCredite.getSolde() +" € ]" );
 //		}}
 
+	/**
+	 * Méthode permettant de effectuer un virement entre deux compte
+	 * @param compteDebite
+	 * @param compteCredite
+	 * @param montant du virement
+	 * @return un boolean pour pouvoir tester la méthode
+	 * @throws SaisieException
+	 */
+
 	public boolean EffectuerVirement(Compte compteDebite, Compte compteCredite, int montant) throws SaisieException{
+
 			if(montant>compteDebite.getSolde())throw new SaisieException("Le solde du compte "
 					+ "débité n'est pas assez élevé pour effectuer ce virement");
 			else{long SoldeCD = compteDebite.getSolde();
