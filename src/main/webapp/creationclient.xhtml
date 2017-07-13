@@ -27,31 +27,57 @@
 					<p:panel id="panelcreation" header="Creation d'un client">
 
 
-						<h:panelGrid columns="3" columnClasses="titleCell">
+						<h:panelGrid columns="4" columnClasses="titleCell">
 
 
 							<h:outputLabel for="Nom" value="Nom : " />
 							<h:inputText id="Nom" value="#{clientBean.client.nom}" />
 							<h:message for="Nom" errorClass="invalid" />
+							<div></div>
 
 							<h:outputLabel for="Prenom" value="Prenom : " />
 							<h:inputText id="Prenom" value="#{clientBean.client.prenom}" />
 							<h:message for="Prenom" errorClass="invalid" />
+							<div></div>
 
 							<h:outputLabel for="Adresse" value="Adresse : " />
 							<h:inputText id="Adresse" value="#{clientBean.client.adresse}" />
 							<h:message for="Adresse" errorClass="invalid" />
+							<div></div>
 
 							<h:outputLabel for="Email" value="Email : " />
 							<h:inputText id="Email" value="#{clientBean.client.email}" />
 							<h:message for="Email" errorClass="invalid" />
+							<div></div>
 
 							<h:outputLabel for="IdConseiller" value="IdConseiller : " />
-							<h:inputText id="IdConseiller" value="#{clientBean.client.idConseiller}">
+							<h:inputText id="IdConseiller"
+								value="#{clientBean.client.idConseiller}">
 								<f:convertNumber integerOnly="true" />
 							</h:inputText>
 							<h:message for="IdConseiller" errorClass="invalid" />
+							<div></div>
 
+							<h:outputText value="Creation d'un compte Courant " />
+							<p:selectBooleanCheckbox value="#{clientBean.checkcourant}" />
+							<h:outputLabel for="CompteCourant"
+								value=" Solde du compte Courant : " />
+							<h:inputText id="CompteCourant"
+								value="#{clientBean.soldeCourant}">
+								<f:convertNumber class="LongConverter" />
+							</h:inputText>
+							
+
+							<h:outputText value="Creation d'un compte Epargne " />
+							<p:selectBooleanCheckbox value="#{clientBean.checkepargne}" />
+							<h:outputLabel for="CompteEpargne"
+								value=" Solde du compte Epargne : " />
+							<h:inputText id="CompteEpargne"
+								value="#{clientBean.soldeEpargne}">
+								<f:convertNumber class="LongConverter" />
+							</h:inputText>
+							
+							
 <!-- 							<h:outputLabel for="CompteCourant" -->
 <!-- 								value=" Solde du compte courant : " /> -->
 <!-- 							<h:inputText id="CompteCourant" -->
@@ -68,7 +94,6 @@
 <!-- 							</h:inputText> -->
 
 							<h:message for="CompteEpargne" errorClass="invalid" />
-
 						</h:panelGrid>
 
 						<p:commandButton id="register" action="#{clientBean.addClient}"

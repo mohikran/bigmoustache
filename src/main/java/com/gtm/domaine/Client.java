@@ -69,7 +69,8 @@ public class Client {
 
 	/**
 	 * 
-	 * @param id Numero identification du client, est unique
+	 * @param id
+	 *            Numero identification du client, est unique
 	 * @param nom
 	 *            Nom du client
 	 * @param prenom
@@ -97,7 +98,7 @@ public class Client {
 		this.compteEpargne = compteEpargne;
 		this.idConseiller = idConseiller;
 	}
-	
+
 	public Client(int id, String nom, String prenom, String adresse, String email, int idConseiller) {
 		super();
 		this.id = id;
@@ -110,6 +111,12 @@ public class Client {
 		this.idConseiller = idConseiller;
 	}
 
+	public Client(CompteCourant compteCourant, CompteEpargne compteEpargne) {
+		super();
+		
+		this.compteCourant = compteCourant;
+		this.compteEpargne = compteEpargne;
+	}
 
 	public Client() {
 		super();
