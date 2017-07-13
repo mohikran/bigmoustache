@@ -16,8 +16,9 @@ public class ConseillerCrudService extends GenericCrudService<Conseiller> implem
 	@Inject
 	private IntConseillerCrudDao conseillerDao;
 	
-	/* (non-Javadoc)
-	 * @see com.gtm.service.IntConseillerCrudService#getDao()
+	/**
+	 * Reecriture de la methode getDao() pour retourner la classe ConseillerCrudDao
+	 * (et pouvoir faire appel aux méthodes)
 	 */
 	@Override
 	public IntConseillerCrudDao getDao(){

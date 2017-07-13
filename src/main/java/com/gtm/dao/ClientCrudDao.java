@@ -14,6 +14,11 @@ import javax.persistence.Query;
 
 import com.gtm.domaine.Client;
 import com.gtm.domaine.Conseiller;
+/**
+ * 
+ * Classe redéfinissant les méthodes CRUD pour les objets de type Client dans la couche Dao. Elle hérite de GenericCrudDao.
+ *
+ */
 
 @Named
 @SessionScoped
@@ -24,16 +29,22 @@ public class ClientCrudDao extends GenericCrudDao<Client> implements IntClientCr
 	 */
 	private static final long serialVersionUID = 1L;
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.gtm.dao.IntClientCrudDao#getClazz()
+	/**
+	 * Reecriture de la methode getClazz() pour retourner la classe de Client
+	 * (et pouvoir faire appel au méthode de Client dans le generique)
 	 */
 	@Override
 	public Class<Client> getClazz() {
 		return Client.class;
 	}
-	
+
+	/**
+	 * Reecriture de la methode sauverEnBase() definie dans GenericCrudDao pour
+	 * pouvoir sauver plusieur client (clientsaved est un nouveau client sinon
+	 * on ne peut sauvegarder qu'un client par session)
+	 *
+	 */
+
 	@Override
 	public boolean sauverEnBase(Client input) {
 
@@ -44,7 +55,6 @@ public class ClientCrudDao extends GenericCrudDao<Client> implements IntClientCr
 		Client clientsaved = new Client();
 		clientsaved = input;
 		tx.begin();
-		
 
 		em.persist(em.merge(clientsaved));
 
@@ -55,12 +65,12 @@ public class ClientCrudDao extends GenericCrudDao<Client> implements IntClientCr
 
 		return true;
 	}
-	
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.gtm.dao.IntClientCrudDao#LireByIdConseiller(long)
+	/**
+	 * Methode permettant de remonter toutes la liste des clients d'un conseiller
+	 * @param L'id du conseiller dont on cherche les clients
+	 * @return La liste de clients du conseiller
+	 *
 	 */
 	public List<Client> LireByIdConseiller(long idConseiller) {
 		List<Client> maList = new ArrayList<Client>();

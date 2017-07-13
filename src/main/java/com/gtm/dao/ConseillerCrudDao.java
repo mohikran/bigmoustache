@@ -10,21 +10,31 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 
 import com.gtm.domaine.Conseiller;
-
+/**
+ * 
+ * Classe redéfinissant les méthodes CRUD pour les objets de type Conseiller dans la couche Dao. Elle hérite de GenericCrudDao.
+ *
+ */
 @Named
 @SessionScoped
 public class ConseillerCrudDao extends GenericCrudDao<Conseiller> implements Serializable, IntConseillerCrudDao {
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.gtm.dao.IntConseillerCrudDao#getClazz()
+	/**
+	 * Reecriture de la fonction getClazz() pour retourner la classe de
+	 * Conseiller (et pouvoir faire appel au méthode de Conseiller dans le
+	 * generique)
 	 */
 	@Override
 	public Class<Conseiller> getClazz() {
 		return Conseiller.class;
 	}
 
+	/**
+	 * Reecriture de la methode sauverEnBase() definie dans GenericCrudDao pour
+	 * pouvoir sauver plusieurs conseillers (conseillersaved est un nouveau
+	 * conseiller sinon on ne peut sauvegarder qu'un conseiller par session)
+	 *
+	 */
 	@Override
 	public boolean sauverEnBase(Conseiller input) {
 
@@ -35,7 +45,6 @@ public class ConseillerCrudDao extends GenericCrudDao<Conseiller> implements Ser
 		Conseiller conseillersaved = new Conseiller();
 		conseillersaved = input;
 		tx.begin();
-		
 
 		em.persist(em.merge(conseillersaved));
 
