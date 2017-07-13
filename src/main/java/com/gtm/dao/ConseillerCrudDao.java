@@ -26,7 +26,7 @@ public class ConseillerCrudDao extends GenericCrudDao<Conseiller> implements Ser
 	}
 
 	@Override
-	public Conseiller sauverEnBase(Conseiller input) {
+	public boolean sauverEnBase(Conseiller input) {
 
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("proxybanque-pu");
 		EntityManager em = emf.createEntityManager();
@@ -44,6 +44,6 @@ public class ConseillerCrudDao extends GenericCrudDao<Conseiller> implements Ser
 		em.close();
 		emf.close();
 
-		return input;
+		return true;
 	}
 }

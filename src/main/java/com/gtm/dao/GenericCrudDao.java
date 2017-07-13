@@ -16,7 +16,7 @@ public abstract class GenericCrudDao<T> implements IntGenericCrudDao<T> {
 	/* (non-Javadoc)
 	 * @see com.gtm.dao.IntGenericCrudDao#sauverEnBase(T)
 	 */
-	public T sauverEnBase(T input){
+	public boolean sauverEnBase(T input){
 		
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("proxybanque-pu");
 		EntityManager em = emf.createEntityManager();
@@ -31,7 +31,7 @@ public abstract class GenericCrudDao<T> implements IntGenericCrudDao<T> {
 		em.close();
 		emf.close();
 		
-		return input;
+		return true;
 	}
 	
 	/* (non-Javadoc)
@@ -73,7 +73,7 @@ public abstract class GenericCrudDao<T> implements IntGenericCrudDao<T> {
 	/* (non-Javadoc)
 	 * @see com.gtm.dao.IntGenericCrudDao#modifier(T)
 	 */
-	public T modifier(T input){
+	public boolean modifier(T input){
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("proxybanque-pu");
 		EntityManager em = emf.createEntityManager();
 			
@@ -87,13 +87,13 @@ public abstract class GenericCrudDao<T> implements IntGenericCrudDao<T> {
 		em.close();
 		emf.close();
 		
-		return input;
+		return true;
 	}
 	
 	 /* (non-Javadoc)
 	 * @see com.gtm.dao.IntGenericCrudDao#supprimer(int)
 	 */
-	public void supprimer(int id){
+	public boolean supprimer(int id){
 		 EntityManagerFactory emf = Persistence.createEntityManagerFactory("proxybanque-pu");
 		 EntityManager em = emf.createEntityManager();
 				
@@ -108,6 +108,8 @@ public abstract class GenericCrudDao<T> implements IntGenericCrudDao<T> {
 			
 		 em.close();
 		 emf.close();
+		 
+		 return true;
 	}
 }
 
