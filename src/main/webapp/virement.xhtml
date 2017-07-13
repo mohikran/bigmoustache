@@ -48,30 +48,34 @@
 			</div>
 
 			<div class="ui-g-5">
-			<h:form>
+				<h:form>
 					<p:panel id="panelVirement" header="Virement">
 
 
 						<h:panelGrid columns="2" cellpadding="5">
-							<p:outputLabel  value="Numero du compte a debiter : " />
-							<p:inputText id="debite" value="">
+							<p:outputLabel value="Numero du compte a debiter : " />
+							<p:inputText id="debite" value="#{compteBean.numerocompte1}">
+								<f:convertNumber integerOnly="true" />
+
+							</p:inputText>
+							<p:outputLabel value="Numero du compte a crediter : " />
+							<p:inputText id="credite" value="#{compteBean.numerocompte2}">
+								<f:convertNumber integerOnly="true" />
+
 							</p:inputText>
 
-							<p:outputLabel  value="Numero du compte a crediter : " />
-							<p:inputText  id="credite" value="">
-							</p:inputText >
-							
-							<p:outputLabel  value="Montant transaction  : " />
-							<p:inputText  id="Montant" value="">
-							</p:inputText >
-
+							<p:outputLabel value="Montant transaction  : " />
+							<p:inputText id="Montant" value="#{compteBean.montant}">
+								<f:convertNumber integerOnly="true" />
+							</p:inputText>
 						</h:panelGrid>
 
-						<p:commandButton id="submitlogin" value="Submit" action="aucune"
-							icon="ui-icon-check" />
+						<p:commandButton id="submitlogin" value="Submit"
+							action="#{compteBean.virement}" icon="ui-icon-check"/>
 					</p:panel>
 				</h:form>
-			
+				<a href="./log/Virement.log">Telecharger l'historique des
+					virements</a>
 			</div>
 			<div class="ui-g-1"></div>
 

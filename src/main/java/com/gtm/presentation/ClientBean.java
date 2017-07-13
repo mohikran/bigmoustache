@@ -111,8 +111,7 @@ public class ClientBean implements Serializable {
 
 	/**
 	 * Methode addClient servant a ajouter un client dans la base de donnee en
-	 * appelant la couche service Cette methode n'a pas de parametre, mais
-	 * utilise les informations d'un Client en session, qui est envoyé dans la
+	 * appelant la couche service Cette methode n'a pas de parametre mais renvoie un client dans la couche service
 	 * couche service
 	 * 
 	 * @return Un String renvoyant sur la page d'affichage de la liste des
