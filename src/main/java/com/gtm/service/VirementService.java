@@ -1,17 +1,21 @@
 package com.gtm.service;
 
+import java.io.Serializable;
+
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
+
 import org.apache.log4j.Logger;
 
 import com.gtm.domaine.Compte;
 import com.gtm.domaine.CompteCourant;
 import com.gtm.domaine.CompteEpargne;
 import com.gtm.exception.SaisieException;
-/**
- * Service dedie aux methodes de virement
- * @author Stagiaire
- *
- */
-public class VirementService {
+
+
+@Named
+@SessionScoped
+public class VirementService implements Serializable{
 
 	private final static Logger log = Logger.getLogger(VirementService.class);
 
@@ -35,7 +39,9 @@ public class VirementService {
 	 * @return un boolean pour pouvoir tester la méthode
 	 * @throws SaisieException
 	 */
-	public boolean EffectuerVirement(Compte compteDebite, Compte compteCredite, long montant) throws SaisieException{
+
+	public boolean EffectuerVirement(Compte compteDebite, Compte compteCredite, int montant) throws SaisieException{
+
 			if(montant>compteDebite.getSolde())throw new SaisieException("Le solde du compte "
 					+ "débité n'est pas assez élevé pour effectuer ce virement");
 			else{long SoldeCD = compteDebite.getSolde();

@@ -21,30 +21,50 @@
 				<h:form>
 					<p:dataTable id="tablelisteclient" var="client"
 						value="#{clientBean.listeClient}">
-						<p:column headerText="Nom">
+						<p:column headerText="Nom" filterBy="#{client.nom}">
 							<h:outputText value="#{client.nom}" />
 						</p:column>
 
 						<p:column headerText="Prenom">
 							<h:outputText value="#{client.prenom}" />
 						</p:column>
+						<p:column headerText="Numero Compte Courant"
+							filterBy="#{client.compteCourant.idCompte}">
+							<h:outputText value="#{client.compteCourant.idCompte}" />
+						</p:column>
 
 						<p:column headerText="Solde Compte Courant">
 							<h:outputText value="#{client.compteCourant.solde}" />
 						</p:column>
+						<p:column headerText="Numero Compte Eparge"
+							filterBy="#{client.compteEpargne.idCompte}">
+							<h:outputText value="#{client.compteEpargne.idCompte}" />
+						</p:column>
 						<p:column headerText="Solde Compte Epargne">
 							<h:outputText value="#{client.compteEpargne.solde}" />
 						</p:column>
-						
+						<p:column headerText="Id Conseiller"
+							filterBy="#{client.idConseiller}">
+							<h:outputText value="#{client.idConseiller}" />
+						</p:column>
+
 
 						<p:column headerText="">
-							<p:commandButton value="Afficher Client"
-								action="editionclient">
+							<p:commandButton value="Afficher Client" action="editionclient">
 								<f:setPropertyActionListener target="#{clientBean.client}"
 									value="#{client}" />
 							</p:commandButton>
 						</p:column>
-						
+						<p:column >
+							<p:commandButton icon="ui-icon-trash"
+								action="#{clientBean.removeClient}">
+								<f:setPropertyActionListener target="#{clientBean.client}"
+									value="#{client}" />
+								<f:ajax execute="@form" render="tablelisteclient" />
+
+							</p:commandButton>
+						</p:column>
+
 
 
 					</p:dataTable>
