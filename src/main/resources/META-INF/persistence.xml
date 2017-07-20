@@ -5,6 +5,8 @@
 	version="2.0">
 	<persistence-unit name="bigmoustache-pu">
 	<class>com.gtm.domaine.Client</class>
+	<class>com.gtm.domaine.Barbier</class>
+	<class>com.gtm.domaine.Horaire</class>
 
 		<properties>
 			<property name="hibernate.archive.autodetection" value="class" />
