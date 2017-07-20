@@ -26,33 +26,33 @@
 
 						<h:panelGrid columns="3" cellpadding="5">
 							<p:outputLabel for="Nom" value="Nom :" />
-							<p:inputText id="Nom" value="nom">
+							<p:inputText id="Nom" value="#{clientBean.client.nom}">
 							</p:inputText>
 							<p:message for="Nom" display="icon" />
 
 							<p:outputLabel for="Prenom" value="Prenom :" />
-							<p:inputText id="Prenom" value="prenom">
+							<p:inputText id="Prenom" value="#{clientBean.client.prenom}">
 							</p:inputText>
 							<p:message for="Prenom" display="icon" />
 							
 							<p:outputLabel for="Adresse" value="Adresse :" />
-							<p:inputText id="Adresse" value="adresse">
+							<p:inputText id="Adresse" value="#{clientBean.client.adresse}">
 							</p:inputText>
 							<p:message for="Adresse" display="icon" />
 							
 							<p:outputLabel for="Numero" value="Numero de telephone :" />
-							<p:inputText id="Numero" value="numero">
+							<p:inputText id="Numero" value="#{clientBean.client.numero}">
 							</p:inputText>
 							<p:message for="Numero" display="icon" />
 							
 							<p:outputLabel for="Email" value="Email :" />
-							<p:inputText id="Email" value="email">
+							<p:inputText id="Email" value="#{clientBean.client.email}">
 							</p:inputText>
 							<p:message for="Email" display="icon" />
 
 						</h:panelGrid>
 
-						<p:commandButton id="submitlogin" value="Merci Moustache" action="Aucune"
+						<p:commandButton id="submitlogin" value="Merci Moustache" action="#{clientBean.creerClient}"
 							icon="ui-icon-check" />
 					</p:panel>
 				</h:form>

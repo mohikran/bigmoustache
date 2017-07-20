@@ -31,6 +31,8 @@ public class ClientService implements Serializable, IClientService {
 	}
 
 	public void ajouter(Client client) {
+		System.out.println("Affichage client service" + client);
+
 		clientDao.insert(client);
 	}
 
