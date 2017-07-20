@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
              http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
 	version="2.0">
-	<persistence-unit name="proxybanque-pu">
+	<persistence-unit name="bigmoustache-pu">
 
 
 		<properties>
@@ -13,7 +13,7 @@
 
 			<!-- Configuration de la BDD -->
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/proxybanque" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/bigmoustache" />
 			<property name="javax.persistence.jdbc.user" value="root" />
 			<property name="javax.persistence.jdbc.password" value="" />
 
