@@ -19,13 +19,13 @@ public class ClientBean implements Serializable {
 	private IClientService service;
 	private Client client;
 
-	@PostConstruct
-	public void init() {
-		client = new Client();
-		service = new ClientService();
-	}
+//	@PostConstruct
+//	public void init() {
+//		client = new Client();
+//	}
 
 	public void creerClient() {
+		System.out.println("Affichage client bean" + client);
 		service.ajouter(client);
 	}
 
@@ -44,4 +44,9 @@ public class ClientBean implements Serializable {
 	public void setClient(Client client) {
 		this.client = client;
 	}
+	
+	public ClientBean(){
+		client = new Client ();
+	}
 }
+

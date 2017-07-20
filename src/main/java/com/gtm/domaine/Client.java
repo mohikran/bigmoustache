@@ -9,7 +9,7 @@ import javax.persistence.Id;
 public class Client {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.TABLE)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
 	private String nom;
@@ -30,6 +30,18 @@ public class Client {
 		this.numero = numero;
 	}
 	
+	
+	
+	public Client(Long id, String nom, String prenom, String email, String adresse, String numero) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.email = email;
+		this.adresse = adresse;
+		this.numero = numero;
+	}
+
 	public Client(Client client_) {
 		this.nom = client_.getNom();
 		this.prenom = client_.getPrenom();
