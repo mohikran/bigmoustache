@@ -18,25 +18,41 @@
 
 			<div class="ui-g-3"></div>
 			<div class="ui-g-6">
+			<p>Bonjour chère moustache, renseigne nous sur toi s'il te plait</p>
 				<h:form>
-					<p:panel id="panellogin" header="Login">
+					<p:panel id="panellogin" header="Renseignement sur le client">
 
 						<p:messages id="msgs" />
 
 						<h:panelGrid columns="3" cellpadding="5">
-							<p:outputLabel for="Login" value="Login:" />
-							<p:inputText id="Login" value="Login">
+							<p:outputLabel for="Nom" value="Nom :" />
+							<p:inputText id="Nom" value="nom">
 							</p:inputText>
-							<p:message for="Login" display="icon" />
+							<p:message for="Nom" display="icon" />
 
-							<p:outputLabel for="Password" value="Password : " />
-							<p:password  id="Password" value="Password">
-							</p:password >
-							<p:message for="Password" display="icon" />
+							<p:outputLabel for="Prenom" value="Prenom :" />
+							<p:inputText id="Prenom" value="prenom">
+							</p:inputText>
+							<p:message for="Prenom" display="icon" />
+							
+							<p:outputLabel for="Adresse" value="Adresse :" />
+							<p:inputText id="Adresse" value="adresse">
+							</p:inputText>
+							<p:message for="Adresse" display="icon" />
+							
+							<p:outputLabel for="Numero" value="Numero de telephone :" />
+							<p:inputText id="Numero" value="numero">
+							</p:inputText>
+							<p:message for="Numero" display="icon" />
+							
+							<p:outputLabel for="Email" value="Email :" />
+							<p:inputText id="Email" value="email">
+							</p:inputText>
+							<p:message for="Email" display="icon" />
 
 						</h:panelGrid>
 
-						<p:commandButton id="submitlogin" value="Submit" action="listeconseiller"
+						<p:commandButton id="submitlogin" value="Merci Moustache" action="Aucune"
 							icon="ui-icon-check" />
 					</p:panel>
 				</h:form>
