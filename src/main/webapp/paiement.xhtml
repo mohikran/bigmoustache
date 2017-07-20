@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<h:outputStylesheet library="css" name="config.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Paiement</title>
+</h:head>
+<h:body>
+	<ui:composition template="template2.xhtml">
+		<ui:define name="content">
+
+			<div class="ui-g-3"></div>
+
+			<div class="ui-g-6">
+				<h:form>
+					<p:panel id="panelpaiement" header="PAIEMENT EN LIGNE">
+						<h:panelGrid columns="4">
+							<p:column>
+								<h:outputLabel for="numbercard" value="Numero de carte :"
+									style="font-weight:bold" />
+							</p:column>
+							<p:column>
+								<div class="ui-g-1"></div>
+							</p:column>
+							<p:column colspan="2">
+								<p:inputText id="numbercard" value="">
+									<f:validateLength minimum="16" maximum="16" />
+								</p:inputText>
+							</p:column>
+							<p:column>
+								<div class="ui-g-1"></div>
+							</p:column>
+
+
+							<p:column>
+								<p:outputLabel for="month"
+									value="Date de fin de validité (MM/AA)" />
+							</p:column>
+							<p:column>
+								<div class="ui-g-1"></div>
+							</p:column>
+							<p:column>
+								<p:selectOneMenu id="month" value="" style="width:125px">
+									<f:selectItem itemLabel="01" itemValue="01" />
+									<f:selectItem itemLabel="02" itemValue="02" />
+									<f:selectItem itemLabel="03" itemValue="03" />
+									<f:selectItem itemLabel="04" itemValue="04" />
+									<f:selectItem itemLabel="05" itemValue="05" />
+									<f:selectItem itemLabel="06" itemValue="06" />
+									<f:selectItem itemLabel="07" itemValue="07" />
+									<f:selectItem itemLabel="08" itemValue="08" />
+									<f:selectItem itemLabel="09" itemValue="09" />
+									<f:selectItem itemLabel="10" itemValue="10" />
+									<f:selectItem itemLabel="11" itemValue="11" />
+									<f:selectItem itemLabel="12" itemValue="12" />
+								</p:selectOneMenu>
+							</p:column>
+							<p:column>
+								<p:selectOneMenu id="year" value="" style="width:125px">
+									<f:selectItem itemLabel="17" itemValue="17" />
+									<f:selectItem itemLabel="18" itemValue="18" />
+									<f:selectItem itemLabel="19" itemValue="19" />
+									<f:selectItem itemLabel="20" itemValue="20" />
+									<f:selectItem itemLabel="21" itemValue="21" />
+									<f:selectItem itemLabel="22" itemValue="22" />
+									<f:selectItem itemLabel="23" itemValue="23" />
+								</p:selectOneMenu>
+							</p:column>
+
+							<p:column>
+								<h:outputLabel for="cryptogramme"
+									value="Cryptogramme visuel - 3 derniers chiffres au dos de la carte (?) :"
+									style="font-weight:bold" />
+							</p:column>
+							<p:column>
+								<div class="ui-g-1"></div>
+							</p:column>
+							<p:column>
+								<p:inputText id="cryptogramme" value="">
+									<f:validateLength minimum="3" maximum="3" />
+								</p:inputText>
+							</p:column>
+							<p:column>
+								<div class="ui-g-1"></div>
+							</p:column>
+						</h:panelGrid>
+					</p:panel>
+
+					<p:commandButton id="submitpaiement" value="Valider"
+						action="Aucune" />
+					<p:commandButton id="submitannuler" value="Annuler" action="Aucune"
+						icon="ui-icon-check" />
+				</h:form>
+			</div>
+
+			<div class="ui-g-3"></div>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
