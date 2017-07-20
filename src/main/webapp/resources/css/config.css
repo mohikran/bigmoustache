@@ -1,6 +1,7 @@
 @CHARSET "ISO-8859-1";
 
-
+#bodytemplate{background-image:url("background.png");
+background-repeat:repeat; }
 
 #copyright {
 	height: 40px;
@@ -43,27 +44,27 @@ button#submitlogin {
 
 
 /* Background panel*/
-
+/* 
 div#j_idt14\:panellogin.ui-panel.ui-widget.ui-widget-content.ui-corner-all
 	{
 	border: 1px solid #000000;
 	background: #cacaca;
 }
-/* Header panel*/
+Header panel
 
 div#j_idt14\:panellogin_header.ui-panel-titlebar.ui-widget-header.ui-helper-clearfix.ui-corner-all
 	{
 	border: 1px solid #000000;
 	background: rgb(53, 178, 234);
 }
-/* Submit button panel*/
+Submit button panel
 
 button#j_idt14\:submitlogin.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left
 	{
 	background: #31a524
 		-webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255,
 		0.8)), to(rgba(255, 255, 255, 0)));
-}
+} */
 
 
 /* =================================PAGE Creation Client =================================*/

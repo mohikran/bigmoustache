@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<h:outputStylesheet library="css" name="config.css" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Login Page</title>
+</h:head>
+<h:body>
+	<ui:composition template="template2.xhtml">
+
+		<ui:define name="content">
+
+			<div class="ui-g-3"></div>
+			<div class="ui-g-6">
+			<p>Bonjour chère moustache, voici la liste des services que tu peux choisir</p>
+				<p:dataTable id="tableService" var="service"
+						value="rien">
+						<p:column headerText="Nom">
+							<h:outputText value="#{conseiller.nom}" />
+						</p:column>
+
+						<p:column headerText="Prenom">
+							<h:outputText value="#{conseiller.prenom}" />
+						</p:column>
+
+						<p:column headerText="Login du conseiller">
+							<h:outputText value="#{conseiller.login}" />
+						</p:column>
+						<p:column headerText="Password ">
+							<h:outputText value="Secret" />
+						</p:column>
+						<p:column headerText="Id du Conseiller ">
+							<h:outputText value="#{conseiller.idConseiller}" />
+						</p:column>
+						
+
+						<p:column headerText="Supprimer">
+							<p:commandButton icon="ui-icon-trash"
+								action="#{conseillerBean.removeConseiller}">
+								<f:setPropertyActionListener target="#{conseillerBean.conseiller}"
+									value="#{conseiller}" />
+									 <f:ajax execute="@form" render="tablelisteconseiller" />
+							</p:commandButton>
+						</p:column>
+						
+
+
+					</p:dataTable>
+				
+				
+				
+			</div>
+			<div class="ui-g-3"></div>
+
+
+		</ui:define>
+
+	</ui:composition>
+</h:body>
+</html>
