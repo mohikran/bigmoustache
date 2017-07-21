@@ -2,6 +2,7 @@ package com.gtm.presentation;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
@@ -58,6 +59,7 @@ public class BarbierBean implements Serializable {
 		for (Horaire horaire : listeHoraire) {
 			listeString.add(horaire.getHoraire());
 		}
+		Collections.sort(listeString);
 		return listeString;
 	}
 	

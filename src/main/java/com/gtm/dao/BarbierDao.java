@@ -33,21 +33,33 @@ public class BarbierDao implements Serializable, IBarbierDao{
 		Barbier barbiersaved = new Barbier(barbier_);
 		tx.begin();
 		
-		Horaire horaire1 = new Horaire("8h00");
-		Horaire horaire2 = new Horaire("9h00");
+		Horaire horaire1 = new Horaire("08h00");
+		Horaire horaire2 = new Horaire("09h00");
 		Horaire horaire3 = new Horaire("10h00");
 		Horaire horaire4 = new Horaire("11h00");
+		Horaire horaire5 = new Horaire("13h00");
+		Horaire horaire6 = new Horaire("14h00");
+		Horaire horaire7 = new Horaire("15h00");
+		Horaire horaire8 = new Horaire("16h00");
 		
 		barbiersaved.initialiserHoraire();
 		barbiersaved.ajouterHoraire(horaire1);
 		barbiersaved.ajouterHoraire(horaire2);
 		barbiersaved.ajouterHoraire(horaire3);
 		barbiersaved.ajouterHoraire(horaire4);
+		barbiersaved.ajouterHoraire(horaire5);
+		barbiersaved.ajouterHoraire(horaire6);
+		barbiersaved.ajouterHoraire(horaire7);
+		barbiersaved.ajouterHoraire(horaire8);
 		
 		em.persist(horaire1);
 		em.persist(horaire2);
 		em.persist(horaire3);
 		em.persist(horaire4);
+		em.persist(horaire5);
+		em.persist(horaire6);
+		em.persist(horaire7);
+		em.persist(horaire8);
 		em.persist(barbiersaved);
 
 		tx.commit();
