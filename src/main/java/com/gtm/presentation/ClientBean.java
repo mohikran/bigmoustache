@@ -10,6 +10,7 @@ import javax.inject.Named;
 import com.gtm.domaine.Client;
 import com.gtm.service.IClientService;
 
+@SuppressWarnings("serial")
 @Named
 @SessionScoped
 public class ClientBean implements Serializable {

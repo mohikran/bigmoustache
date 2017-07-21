@@ -1,6 +1,7 @@
 package com.gtm.domaine;
 
 import java.util.Collection;
+import java.util.HashSet;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +21,7 @@ public class Barbier {
 	private String prenom;
 	private String numero;
 	@OneToMany
-	private Collection<String> horaireDisponible;
+	private Collection<Horaire> horaireDisponible;
 	
 	public Barbier() {
 	}
@@ -73,12 +74,20 @@ public class Barbier {
 		this.numero = numero;
 	}
 
-	public Collection<String> getHoraireDisponible() {
+	public Collection<Horaire> getHoraireDisponible() {
 		return horaireDisponible;
 	}
 
-	public void setHoraireDisponible(Collection<String> horaireDisponible) {
+	public void setHoraireDisponible(Collection<Horaire> horaireDisponible) {
 		this.horaireDisponible = horaireDisponible;
+	}
+	
+	public void initialiserHoraire() {
+		horaireDisponible = new HashSet<Horaire>();		
+	}
+	
+	public void ajouterHoraire(Horaire horaire) {
+		horaireDisponible.add(horaire);
 	}
 	
 }
