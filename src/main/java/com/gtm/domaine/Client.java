@@ -4,6 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Pattern;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 public class Client {
@@ -12,10 +17,28 @@ public class Client {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	
+	@NotEmpty
+	@Length(min = 2, max = 50)
+	@Pattern(regexp = "([A-Za-z éèà]+)", message = "ne doit contenir que des lettres, tirets ou espaces")
 	private String nom;
+	
+	@NotEmpty
+	@Length(min = 2, max = 50)
+	@Pattern(regexp = "([A-Za-z éèà]+)", message = "ne doit contenir que des lettres, tirets ou espaces")
 	private String prenom;
+	
+	@NotEmpty
+	@Email
+	@Length(min = 5, max = 50)
 	private String email;
+	
+	@NotEmpty
+	@Length(min = 5, max = 200)
 	private String adresse;
+	
+	@NotEmpty
+	@Length(min = 10, max = 15)
+	@Pattern(regexp = "(\\d+)|([\\d ])", message = "doit être un numéro de téléphone" )
 	private String numero;
 	
 	public Client() {
