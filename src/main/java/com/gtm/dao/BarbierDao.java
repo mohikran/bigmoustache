@@ -126,4 +126,22 @@ public class BarbierDao implements Serializable, IBarbierDao{
 		
 		return true;
 	}
+	
+	public boolean update(Barbier barbier) {
+		
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("bigmoustache-pu");
+		EntityManager em = emf.createEntityManager();
+		EntityTransaction tx = em.getTransaction();
+		
+		tx.begin();
+		
+		em.merge(barbier);
+		
+		tx.commit();
+		
+		em.close();
+		emf.close();
+		
+		return true;
+	}
 }

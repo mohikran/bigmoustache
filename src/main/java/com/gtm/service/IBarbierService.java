@@ -13,5 +13,7 @@ public interface IBarbierService {
 	void ajouter(Barbier barbier);
 
 	void supprimer(Barbier barbier);
+	
+	void miseAJour(Barbier barbier);
 
 }

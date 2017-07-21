@@ -7,6 +7,7 @@ import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import com.gtm.dao.BarbierDao;
 import com.gtm.dao.IBarbierDao;
 import com.gtm.domaine.Barbier;
 
@@ -26,7 +27,7 @@ public class BarbierService implements Serializable, IBarbierService{
 		return barbierDao.findAll();
 	}
 
-	public Barbier getById(int id) {
+	public Barbier getById(int id) {	
 		return barbierDao.findById(id);
 	}
 
@@ -36,6 +37,10 @@ public class BarbierService implements Serializable, IBarbierService{
 
 	public void supprimer(Barbier barbier) {
 		barbierDao.delete(barbier);
+	}
+	
+	public void miseAJour(Barbier barbier) {
+		barbierDao.update(barbier);
 	}
 
 }
