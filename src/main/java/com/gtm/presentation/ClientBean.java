@@ -18,7 +18,6 @@ public class ClientBean implements Serializable {
 	private Client client;
 	@Inject
 	private IClientService service;
-	private String horaireRdv;
 	private Boolean service1, service2;
 	private Integer prix;
 	private String serviceSelect;
@@ -54,7 +53,7 @@ public class ClientBean implements Serializable {
 		}
 		else {return "listeService";}
 	}
-
+	
 	public IClientService getService() {
 		return service;
 	}
@@ -69,14 +68,6 @@ public class ClientBean implements Serializable {
 
 	public void setClient(Client client) {
 		this.client = client;
-	}
-
-	public String getHoraireRdv() {
-		return horaireRdv;
-	}
-
-	public void setHoraireRdv(String horaireRdv) {
-		this.horaireRdv = horaireRdv;
 	}
 
 	public Integer getPrix() {

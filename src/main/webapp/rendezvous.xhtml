@@ -23,12 +23,12 @@
 					<p:messages autoUpdate="true" />
 					<h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="5">
 						<p:outputLabel value="Horaire du rendez-vous : " />
-						<h:selectOneMenu value="#{clientBean.horaireRdv}">
+						<h:selectOneMenu value="#{barbierBean.horaireRdv}">
 							<f:selectItems value="#{barbierBean.listeHoraire}"/>
 						</h:selectOneMenu>
 					</h:panelGrid>
 					
-					<p:commandButton id="submitRdv" value="Merci Moustache" action="#{clientBean.validerRdv}"
+					<p:commandButton id="submitRdv" value="Merci Moustache" action="#{barbierBean.validerRdv}"
 						icon="ui-icon-check" />
 
 				</h:form>

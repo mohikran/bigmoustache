@@ -24,6 +24,7 @@ public class BarbierBean implements Serializable {
 	private Barbier barbier;
 	@Inject
 	private IBarbierService service;
+	private String horaireRdv;
 
 	public BarbierBean() {
 
