@@ -13,5 +13,7 @@ public interface IBarbierDao {
 	ArrayList<Barbier> findAll();
 
 	boolean delete(Barbier barbier);
+	
+	boolean update(Barbier barbier);
 
 }
