@@ -95,4 +95,9 @@ public class BarbierBean implements Serializable {
 	public void setHoraireRdv(String horaireRdv) {
 		this.horaireRdv = horaireRdv;
 	}
+
+	public String selectionBarbier() {
+		this.barbier=barbier;
+		return "listeService";
+	}
 }

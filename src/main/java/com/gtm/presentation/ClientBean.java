@@ -36,7 +36,7 @@ public class ClientBean implements Serializable {
 		try {
 			System.out.println("Affichage client bean" + client);
 			service.ajouter(client);
-			return "listeService";
+			return "barbier";
 		} catch (Exception e) {
 			return "formulaire";
 		}
@@ -44,11 +44,13 @@ public class ClientBean implements Serializable {
 
 	public String selecService() {
 		if (serviceSelect.equals("service1")){
+			serviceSelect= "Service : Barbe façon bucheron Canadien";
 			prix = 25;
 		return "rendezvous";
 		}
 		else if (serviceSelect.equals("service2")){
 			prix = 35;
+			serviceSelect= "Service : Barbe à l'Anglaise";
 		return "rendezvous";
 		}
 		else {return "listeService";}
@@ -86,4 +88,5 @@ public class ClientBean implements Serializable {
 		this.serviceSelect = serviceSelect;
 	}
 
+	
 }
