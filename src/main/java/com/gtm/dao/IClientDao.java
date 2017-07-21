@@ -6,7 +6,7 @@ import com.gtm.domaine.Client;
 
 public interface IClientDao {
 
-	boolean insert(Client client_);
+	Client insert(Client client_);
 
 	Client findById(int id);
 

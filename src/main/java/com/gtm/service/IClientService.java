@@ -10,7 +10,7 @@ public interface IClientService {
 
 	Client getById(int id);
 
-	void ajouter(Client client);
+	Client ajouter(Client client);
 
 	void supprimer(Client client);
 

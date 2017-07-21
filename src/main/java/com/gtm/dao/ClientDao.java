@@ -22,7 +22,7 @@ public class ClientDao implements Serializable, IClientDao {
 
 	}
 
-	public boolean insert(Client client_) {
+	public Client insert(Client client_) {
 
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("bigmoustache-pu");
 		EntityManager em = emf.createEntityManager();
@@ -38,7 +38,7 @@ public class ClientDao implements Serializable, IClientDao {
 		em.close();
 		emf.close();
 
-		return true;
+		return clientsaved;
 	}
 
 	public Client findById(int id) {
