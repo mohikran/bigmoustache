@@ -19,9 +19,10 @@ public class ClientBean implements Serializable {
 	@Inject
 	private IClientService service;
 	private String horaireRdv;
-
+	private Boolean service1, service2;
 	private Integer prix;
 	private String serviceSelect;
+
 	public ClientBean() {
 		// client = new Client ();
 		System.out.println("\n\n BLABLA \n\n");
@@ -33,19 +34,27 @@ public class ClientBean implements Serializable {
 	}
 
 	public String creerClient() {
-			try{System.out.println("Affichage client bean" + client);
+		try {
+			System.out.println("Affichage client bean" + client);
 			service.ajouter(client);
-			return "barbier";}catch (Exception e) {
+			return "listeService";
+		} catch (Exception e) {
 			return "formulaire";
-			}
+		}
 	}
 
-	public String selecService(){
+	public String selecService() {
+		if (serviceSelect.equals("service1")){
+			prix = 25;
 		return "rendezvous";
-		
-		
+		}
+		else if (serviceSelect.equals("service2")){
+			prix = 35;
+		return "rendezvous";
+		}
+		else {return "listeService";}
 	}
-	
+
 	public IClientService getService() {
 		return service;
 	}
@@ -86,6 +95,4 @@ public class ClientBean implements Serializable {
 		this.serviceSelect = serviceSelect;
 	}
 
-	
-	
 }

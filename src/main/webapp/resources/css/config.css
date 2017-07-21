@@ -95,3 +95,24 @@ button#j_idt14\:submitlogin.ui-button.ui-widget.ui-state-default.ui-corner-all.u
 	border-bottom-width: 5px;
 	border-color: black;
 }
+
+/*===============PAGE PAIEMENT===============*/
+.text-output-creditcard{
+    font-weight:bold;
+}
+
+.text-input-creditcard{
+    width:200px;
+}
+
+.panelgrid-creditcard
+{
+	width:  100%;
+	border: none;
+	border-style: none;
+}
+
+.button-creditcard
+{
+	float:right;
+}
