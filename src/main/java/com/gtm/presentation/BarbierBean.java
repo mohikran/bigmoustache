@@ -1,6 +1,9 @@
 package com.gtm.presentation;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
@@ -8,6 +11,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import com.gtm.domaine.Barbier;
+import com.gtm.domaine.Horaire;
 import com.gtm.service.IBarbierService;
 
 @SuppressWarnings("serial")
@@ -46,6 +50,15 @@ public class BarbierBean implements Serializable {
 
 	public void setBarbier(Barbier barbier) {
 		this.barbier = barbier;
+	}
+	
+	public List<String> getListeHoraire() {
+		List<Horaire> listeHoraire = (List<Horaire>) service.getById(3).getHoraireDisponible();
+		List<String> listeString = new ArrayList<String>();
+		for (Horaire horaire : listeHoraire) {
+			listeString.add(horaire.getHoraire());
+		}
+		return listeString;
 	}
 	
 }

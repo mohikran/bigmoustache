@@ -59,14 +59,14 @@ public class BarbierDao implements Serializable, IBarbierDao{
 	}
 
 	public Barbier findById(int id) {
-		
+		Long idd = new Long(id); 
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("bigmoustache-pu");
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		
 		tx.begin();
 		
-		Barbier barbier = em.find(Barbier.class, id);
+		Barbier barbier = em.find(Barbier.class, idd);
 		
 		tx.commit();
 		
