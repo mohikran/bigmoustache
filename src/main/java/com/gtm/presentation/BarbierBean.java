@@ -10,6 +10,7 @@ import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import com.gtm.dao.IBarbierDao;
 import com.gtm.domaine.Barbier;
 import com.gtm.domaine.Horaire;
 import com.gtm.service.IBarbierService;
@@ -22,6 +23,9 @@ public class BarbierBean implements Serializable {
 	private Barbier barbier;
 	@Inject
 	private IBarbierService service;
+	
+	@Inject 
+	IBarbierDao daobarbier;
 	
 	public BarbierBean() {
 		
@@ -60,5 +64,4 @@ public class BarbierBean implements Serializable {
 		}
 		return listeString;
 	}
-	
 }
