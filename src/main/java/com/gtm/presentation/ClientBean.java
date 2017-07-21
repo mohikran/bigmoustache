@@ -20,6 +20,8 @@ public class ClientBean implements Serializable {
 	private IClientService service;
 	private String horaireRdv;
 
+	private Integer prix;
+	private String serviceSelect;
 	public ClientBean() {
 		// client = new Client ();
 		System.out.println("\n\n BLABLA \n\n");
@@ -38,6 +40,12 @@ public class ClientBean implements Serializable {
 			}
 	}
 
+	public String selecService(){
+		return "rendezvous";
+		
+		
+	}
+	
 	public IClientService getService() {
 		return service;
 	}
@@ -62,4 +70,22 @@ public class ClientBean implements Serializable {
 		this.horaireRdv = horaireRdv;
 	}
 
+	public Integer getPrix() {
+		return prix;
+	}
+
+	public void setPrix(Integer prix) {
+		this.prix = prix;
+	}
+
+	public String getServiceSelect() {
+		return serviceSelect;
+	}
+
+	public void setServiceSelect(String serviceSelect) {
+		this.serviceSelect = serviceSelect;
+	}
+
+	
+	
 }
