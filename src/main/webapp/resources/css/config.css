@@ -149,3 +149,26 @@ div#j_idt14\:editionclient_content.ui-panel-content.ui-widget-content{
 #navbarhead {
 	color: white;
 }
+
+
+
+/*PAGE PAIEMENT*/
+.text-output-creditcard{
+    font-weight:bold;
+}
+
+.text-input-creditcard{
+    width:200px;
+}
+
+.panelgrid-creditcard
+{
+	width:  100%;
+	border: none;
+	border-style: none;
+}
+
+.button-creditcard
+{
+	float:right;
+}
