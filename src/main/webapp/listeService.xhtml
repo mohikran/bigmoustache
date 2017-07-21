@@ -7,30 +7,55 @@
 	xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
 	<h:outputStylesheet library="css" name="config.css" />
-	<h:outputStylesheet library="css" name="config.css" />
 
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<title>Login Page</title>
+	<title>Liste des Services</title>
 </h:head>
 <h:body>
 	<ui:composition template="template2.xhtml">
 
 		<ui:define name="content">
+			<div id="bodypage">
+				<div class="ui-g-3"></div>
+				<div class="ui-g-6">
+					<h:form>
+						<h3>Chère moustache, merci de choisir le service qui te va au
+							poil!</h3>
 
-			<div class="ui-g-3"></div>
-			<div class="ui-g-6">
-			<p>Bonjour chère moustache, voici la liste des services que tu peux choisir</p>
-				
-				<div class="ui-g-4" id="premierservice"> test id </div>
-				
-				
-				
+						<div id="service1">
+							<h2>Premier pack:</h2>
+							<h3>La barbe du vrai bucheron canadien, taillée à la hache
+								et avec un baume de soin pour votre confort</h3>
+							<p:graphicImage id="bucheron" library="img" name="canada.jpg"
+								width="200x" height="200px" />
+							<h3>Prix : 25 euros</h3>
+						</div>
+						<div id="service2">
+							<h2>Second pack:</h2>
+							<h3>La tailler de la barbe plus la moustache qui fera palir
+								de jalousie les anglais</h3>
+							<p:graphicImage id="anglais" library="img" name="anglais.jpg"
+								width="200x" height="200px" />
+							<h3>Prix : 35 euros</h3>
+						</div>
+
+						<h:panelGrid columns="2" style="margin-bottom:100px"
+							cellpadding="5">
+							<p:outputLabel for="service" value="Service choisi :  " />
+							<p:selectOneRadio id="service" value="rien">
+								<f:selectItem itemLabel="Service 1 " itemValue="40" />
+								<f:selectItem itemLabel="Service 2" itemValue="60" />
+							</p:selectOneRadio>
+							<p:commandButton value="Submit" 
+							icon="ui-icon-check" action="formulaire" />
+						</h:panelGrid>
+						
+
+					</h:form>
+				</div>
+				<div class="ui-g-3"></div>
 			</div>
-			<div class="ui-g-3"></div>
-
-
 		</ui:define>
-
 	</ui:composition>
 </h:body>
 </html>
