@@ -25,9 +25,6 @@ public class BarbierBean implements Serializable {
 	private Barbier barbier;
 	@Inject
 	private IBarbierService service;
-	
-
-	
 	private String horaireRdv;
 
 	public BarbierBean() {
@@ -43,12 +40,12 @@ public class BarbierBean implements Serializable {
 		service.ajouter(barbier);
 	}
 
-	public String validerRdv(String h) {
+	public String validerRdv() {
 
 		Barbier barbier = service.getById(3);
 		for (Horaire horaire : barbier.getHoraireDisponible()) {
-			if (horaire.getHoraire().equals(h)) {
-				System.out.println(h);
+			if (horaire.getHoraire().equals(horaireRdv)) {
+				System.out.println(horaireRdv);
 				barbier.getHoraireDisponible().remove(horaire);
 			}
 		}
@@ -83,11 +80,19 @@ public class BarbierBean implements Serializable {
 		Collections.sort(listeString);
 		return listeString;
 	}
-	
-	public List<Barbier> getListeBarbier(){
+
+	public List<Barbier> getListeBarbier() {
 		List<Barbier> listeBarbiers = new ArrayList<Barbier>();
 		listeBarbiers = service.getListe();
 		return listeBarbiers;
-		
+
+	}
+
+	public String getHoraireRdv() {
+		return horaireRdv;
+	}
+
+	public void setHoraireRdv(String horaireRdv) {
+		this.horaireRdv = horaireRdv;
 	}
 }
