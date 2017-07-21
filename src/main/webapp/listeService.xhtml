@@ -42,9 +42,9 @@
 						<h:panelGrid columns="2" style="margin-bottom:100px"
 							cellpadding="5">
 							<p:outputLabel for="service" value="Service choisi :  " />
-							<p:selectOneRadio id="service" value="rien">
-								<f:selectItem itemLabel="Service 1 " itemValue="40" />
-								<f:selectItem itemLabel="Service 2" itemValue="60" />
+							<p:selectOneRadio id="service" value="#{clientBean.serviceSelect}">
+								<f:selectItem itemLabel="Service 1 " itemValue="service1" />
+								<f:selectItem itemLabel="Service 2" itemValue="service2" />
 							</p:selectOneRadio>
 							<p:commandButton value="Submit" 
 							icon="ui-icon-check" action="#{clientBean.selecService}" />
