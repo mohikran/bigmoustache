@@ -18,19 +18,21 @@
 
 			<div class="ui-g-3"></div>
 			<div class="ui-g-6">
-			<p>Voici un résumé de ta commande chère Moustache !</p>
-				
-				<hr/>
+				<p>Voici un résumé de ta commande chère Moustache !</p>
+
+				<hr />
 				<p>Client : #{clientBean.client.prenom} #{clientBean.client.nom}</p>
-                <p>Barbier : #{barbierBean.barbier.prenom} #{barbierBean.barbier.nom}</p>
-                <h:outputText value="Service : Barbe façon bucheron Canadien" rendered="#{service1 eq clientBean.serviceSelect}" />
-				<h:outputText value="Service : Barbe à l'Anglaise" rendered="#{service2 eq clientBean.serviceSelect}" />   
-				<p>Prix : #{clientBean.prix} &euro</p>
-				<p>Rendez-vous : Aujourd'hui à #{barbierBean.horaireRdv} chez vous</p>
-				<hr/>
-				
+				<p>Barbier : #{barbierBean.barbier.prenom}
+					#{barbierBean.barbier.nom}</p>
+				<p>#{clientBean.serviceSelect}</p>
+
+				<p>Prix : #{clientBean.prix} euro</p>
+				<p>Rendez-vous : Aujourd'hui à #{barbierBean.horaireRdv} chez
+					vous</p>
+				<hr />
+
 				<p:button outcome="paiement" value="Valider la commande" />
-				
+
 			</div>
 			<div class="ui-g-3"></div>
 

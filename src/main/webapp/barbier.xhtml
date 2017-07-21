@@ -21,21 +21,21 @@
 			<h2>Chère moustache, choisi ton barbier, et choisi bien!</h2>
 			
 			<h:form>
-					<p:dataTable id="tablelisteclient" var="client"
-						value="Non">
+					<p:dataTable id="tablelisteclient" var="barbier"
+						value="#{barbierBean.listeBarbier}">
 						<p:column headerText="Nom" >
-							<h:outputText value="nom" />
+							<h:outputText value="#{barbier.nom}" />
 						</p:column>
 
 						<p:column headerText="Prenom">
-							<h:outputText value="#prenom" />
+							<h:outputText value="#{barbier.prenom}" />
 						</p:column>
 
 
 						<p:column headerText="">
-							<p:commandButton value="Selectionner le barbier" action="editionclient">
-								<f:setPropertyActionListener target="aucune"
-									value="aucune" />
+							<p:commandButton value="Selectionner le barbier" action="#{barbierBean.selectionBarbier}">
+								<f:setPropertyActionListener target="#{barbierBean.barbier}"
+									value="#{barbier}" />
 							</p:commandButton>
 						</p:column>
 
