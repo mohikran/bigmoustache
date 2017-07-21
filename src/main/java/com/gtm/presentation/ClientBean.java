@@ -56,6 +56,15 @@ public class ClientBean implements Serializable {
 		else {return "listeService";}
 	}
 	
+	public void updateClient()
+	{
+		Client clientmodifier = service.update(client);
+		if(clientmodifier != null)
+		{
+			client = clientmodifier;
+		}
+	}
+	
 	public IClientService getService() {
 		return service;
 	}

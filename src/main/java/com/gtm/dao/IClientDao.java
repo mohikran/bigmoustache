@@ -13,5 +13,7 @@ public interface IClientDao {
 	ArrayList<Client> findAll();
 
 	boolean delete(Client client);
+	
+	Client update(Client input);
 
 }
