@@ -39,5 +39,9 @@ public class ClientService implements Serializable, IClientService {
 	public void supprimer(Client client) {
 		clientDao.delete(client);
 	}
+
+	public Client update(Client client) {
+		return clientDao.update(client);
+	}
 	
 }

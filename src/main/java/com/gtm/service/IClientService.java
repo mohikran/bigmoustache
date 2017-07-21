@@ -14,4 +14,5 @@ public interface IClientService {
 
 	void supprimer(Client client);
 
+	Client update(Client client);
 }

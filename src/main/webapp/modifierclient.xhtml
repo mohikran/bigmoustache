@@ -19,21 +19,22 @@
 			<div class="ui-g-3"></div>
 			<div class="ui-g-6">
 				<h:form>
-					<p:panel id="paneldisplayclient" header="Renseignements sur le client">
+					<p:panel id="panelupdateclient" header="Renseignements sur le client">
 						<h:panelGrid styleClass="panelgrid-creditcard">
 							<p:row>
 								<p:column>
 									<p:outputLabel for="Nom" value="Nom : " />
 								</p:column>
-								<p:column>
+								<p:column colspan="2">
 									<p:outputLabel id="Nom" value="#{clientBean.client.nom}" />
 								</p:column>
 							</p:row>
+
 							<p:row>
 								<p:column>
 									<p:outputLabel for="Prenom" value="Prenom : " />
 								</p:column>
-								<p:column>
+								<p:column colspan="2">
 									<p:outputLabel id="Prenom" value="#{clientBean.client.prenom}" />
 								</p:column>
 							</p:row>
@@ -42,8 +43,10 @@
 									<p:outputLabel for="Adresse" value="Adresse : " />
 								</p:column>
 								<p:column>
-									<p:outputLabel id="Adresse"
-										value="#{clientBean.client.adresse}" />
+									<p:inputText id="Adresse" value="#{clientBean.client.adresse}"></p:inputText>
+								</p:column>
+								<p:column>
+									<p:message for="Adresse" display="icon" />
 								</p:column>
 							</p:row>
 							<p:row>
@@ -51,7 +54,11 @@
 									<p:outputLabel for="Numero" value="Numero de telephone : " />
 								</p:column>
 								<p:column>
-									<p:outputLabel id="Numero" value="#{clientBean.client.numero}" />
+									<p:inputText id="Numero" value="#{clientBean.client.numero}">
+									</p:inputText>
+								</p:column>
+								<p:column>
+									<p:message for="Numero" display="icon" />
 								</p:column>
 							</p:row>
 							<p:row>
@@ -59,16 +66,19 @@
 									<p:outputLabel for="Email" value="Email : " />
 								</p:column>
 								<p:column>
-									<p:outputLabel id="Email" value="#{clientBean.client.email}" />
+									<p:inputText id="Email" value="#{clientBean.client.email}"></p:inputText>
+								</p:column>
+								<p:column>
+									<p:message for="Email" display="icon" />
 								</p:column>
 							</p:row>
 						</h:panelGrid>
 						<br />
 						<div class="button-creditcard">
-							<p:button id="submitupdateclient" value="Modifier"
-								outcome="modifierclient" icon="ui-icon-pencil" />
-							<p:button id="submitretour" value="Retour à l'accueil"
-								outcome="formulaire" icon="ui-icon-arrowreturnthick-1-e" />
+							<p:commandButton id="submitupdateclient" value="Mettre à jour"
+								action="#{clientBean.updateClient}" icon="ui-icon-check" />
+							<p:button id="submitannuler" value="Annuler"
+								outcome="affichageclient" icon="ui-icon-cancel" />
 						</div>
 						<br />
 						<br />
@@ -76,7 +86,9 @@
 				</h:form>
 			</div>
 			<div class="ui-g-3"></div>
+
 		</ui:define>
+
 	</ui:composition>
 </h:body>
 </html>
