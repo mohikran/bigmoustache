@@ -42,14 +42,14 @@ public class ClientDao implements Serializable, IClientDao {
 	}
 
 	public Client findById(int id) {
-		
+		Long idd = new Long(id); 
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("bigmoustache-pu");
 		EntityManager em = emf.createEntityManager();
 		EntityTransaction tx = em.getTransaction();
 		
 		tx.begin();
 		
-		Client client = em.find(Client.class, id);
+		Client client = em.find(Client.class, idd);
 		
 		tx.commit();
 		
