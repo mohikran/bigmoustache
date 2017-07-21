@@ -44,13 +44,13 @@ public class ClientBean implements Serializable {
 
 	public String selecService() {
 		if (serviceSelect.equals("service1")){
-			serviceSelect= "Service : Barbe façon bucheron Canadien";
+			serviceSelect= "Service : Barbe faÃ§on bucheron Canadien";
 			prix = 25;
 		return "rendezvous";
 		}
 		else if (serviceSelect.equals("service2")){
 			prix = 35;
-			serviceSelect= "Service : Barbe à l'Anglaise";
+			serviceSelect= "Service : Barbe Ã  l'Anglaise";
 		return "rendezvous";
 		}
 		else {return "listeService";}

@@ -55,7 +55,8 @@ public class BarbierBean implements Serializable {
 
 		service.miseAJour(barbier);
 
-		return "paiement";
+		this.barbier = barbier;
+		return "resumecommande";
 	}
 
 	public IBarbierService getService() {
