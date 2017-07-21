@@ -44,7 +44,7 @@ button#submitlogin {
 
 
 /* Background panel*/
-/* 
+ 
 div#j_idt14\:panellogin.ui-panel.ui-widget.ui-widget-content.ui-corner-all
 	{
 	border: 1px solid #000000;
@@ -64,9 +64,13 @@ button#j_idt14\:submitlogin.ui-button.ui-widget.ui-state-default.ui-corner-all.u
 	background: #31a524
 		-webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255,
 		0.8)), to(rgba(255, 255, 255, 0)));
-} */
+} 
 
+/*==================Page Service====*/
 
+#service1{border-bottom-width: 5px;
+border-color: black;
+}
 /* =================================PAGE Creation Client =================================*/
 
 /* Background panel*/

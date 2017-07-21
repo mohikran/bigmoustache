@@ -18,20 +18,23 @@ public class ClientBean implements Serializable {
 	private Client client;
 	@Inject
 	private IClientService service;
-	
-	public ClientBean(){
-		//client = new Client ();
+
+	public ClientBean() {
+		// client = new Client ();
 		System.out.println("\n\n BLABLA \n\n");
 	}
-	
+
 	@PostConstruct
 	public void init() {
 		client = new Client();
 	}
 
-	public void creerClient() {
-		System.out.println("Affichage client bean" + client);
-		service.ajouter(client);
+	public String creerClient() {
+			try{System.out.println("Affichage client bean" + client);
+			service.ajouter(client);
+			return "barbier";}catch (Exception e) {
+			return "formulaire";
+			}
 	}
 
 	public IClientService getService() {
@@ -49,7 +52,5 @@ public class ClientBean implements Serializable {
 	public void setClient(Client client) {
 		this.client = client;
 	}
-	
-	
-}
 
+}
