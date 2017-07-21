@@ -30,10 +30,10 @@ public class ClientService implements Serializable, IClientService {
 		return clientDao.findById(id);
 	}
 
-	public void ajouter(Client client) {
+	public Client ajouter(Client client) {
 		System.out.println("Affichage client service" + client);
 
-		clientDao.insert(client);
+		return clientDao.insert(client);
 	}
 
 	public void supprimer(Client client) {
