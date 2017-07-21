@@ -9,15 +9,15 @@ import javax.persistence.Id;
 public class Horaire {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	private String horaire;
-	
+
 	public Horaire() {
-		
+
 	}
-	
+
 	public Horaire(String horaire) {
 		this.horaire = horaire;
 	}
@@ -37,6 +37,19 @@ public class Horaire {
 	public void setHoraire(String horaire) {
 		this.horaire = horaire;
 	}
-	
-	
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o)
+			return true;
+		if (o == null || this.getClass() != o.getClass())
+			return false;
+
+		Horaire h = (Horaire) o;
+
+		if (this.horaire.equals(h.getHoraire()))
+			return true;
+		else
+			return false;
+	}
 }

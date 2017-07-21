@@ -188,3 +188,120 @@
 2017-07-21 12:09:04 HHH000126: Indexes: [primary]
 2017-07-21 12:09:04 HHH000232: Schema update complete
 2017-07-21 12:09:04 HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/bigmoustache]
+2017-07-21 15:02:51 HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-21 15:02:51 HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-21 15:02:51 HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-21 15:02:51 HHH000204: Processing PersistenceUnitInfo [
+	name: bigmoustache-pu
+	...]
+2017-07-21 15:02:51 HHH000412: Hibernate Core {4.3.10.Final}
+2017-07-21 15:02:51 HHH000206: hibernate.properties not found
+2017-07-21 15:02:51 HHH000021: Bytecode provider name : javassist
+2017-07-21 15:02:52 HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-07-21 15:02:52 HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-07-21 15:02:52 HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/bigmoustache]
+2017-07-21 15:02:52 HHH000046: Connection properties: {user=root}
+2017-07-21 15:02:52 HHH000006: Autocommit mode: false
+2017-07-21 15:02:52 HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-07-21 15:02:52 HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-07-21 15:02:52 HHH000397: Using ASTQueryTranslatorFactory
+2017-07-21 15:02:52 HV000001: Hibernate Validator 4.3.2.Final
+2017-07-21 15:02:53 HHH000228: Running hbm2ddl schema update
+2017-07-21 15:02:53 HHH000102: Fetching database metadata
+2017-07-21 15:02:53 HHH000396: Updating schema
+2017-07-21 15:02:53 HHH000261: Table found: bigmoustache.barbier
+2017-07-21 15:02:53 HHH000037: Columns: [numero, photo, id, nom, prenom]
+2017-07-21 15:02:53 HHH000108: Foreign keys: []
+2017-07-21 15:02:53 HHH000126: Indexes: [primary]
+2017-07-21 15:02:53 HHH000261: Table found: bigmoustache.barbier_horaire
+2017-07-21 15:02:53 HHH000037: Columns: [barbier_id, horairedisponible_id]
+2017-07-21 15:02:53 HHH000108: Foreign keys: []
+2017-07-21 15:02:53 HHH000126: Indexes: [uk_8ql4xiyrdlyj3msyoudxqjirw, fk_c1p07wybg7n3wcko2c5v3jd0k]
+2017-07-21 15:02:53 HHH000261: Table found: bigmoustache.client
+2017-07-21 15:02:53 HHH000037: Columns: [numero, adresse, id, nom, prenom, email]
+2017-07-21 15:02:53 HHH000108: Foreign keys: []
+2017-07-21 15:02:53 HHH000126: Indexes: [primary]
+2017-07-21 15:02:53 HHH000261: Table found: bigmoustache.horaire
+2017-07-21 15:02:53 HHH000037: Columns: [horaire, id]
+2017-07-21 15:02:53 HHH000108: Foreign keys: []
+2017-07-21 15:02:53 HHH000126: Indexes: [primary]
+2017-07-21 15:02:53 HHH000232: Schema update complete
+2017-07-21 15:02:53 HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/bigmoustache]
+2017-07-21 15:03:13 HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-21 15:03:13 HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-21 15:03:13 HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-21 15:03:13 HHH000204: Processing PersistenceUnitInfo [
+	name: bigmoustache-pu
+	...]
+2017-07-21 15:03:13 HHH000412: Hibernate Core {4.3.10.Final}
+2017-07-21 15:03:13 HHH000206: hibernate.properties not found
+2017-07-21 15:03:13 HHH000021: Bytecode provider name : javassist
+2017-07-21 15:03:13 HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-07-21 15:03:13 HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-07-21 15:03:13 HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/bigmoustache]
+2017-07-21 15:03:13 HHH000046: Connection properties: {user=root}
+2017-07-21 15:03:13 HHH000006: Autocommit mode: false
+2017-07-21 15:03:13 HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-07-21 15:03:13 HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-07-21 15:03:14 HHH000397: Using ASTQueryTranslatorFactory
+2017-07-21 15:03:14 HV000001: Hibernate Validator 4.3.2.Final
+2017-07-21 15:03:14 HHH000228: Running hbm2ddl schema update
+2017-07-21 15:03:14 HHH000102: Fetching database metadata
+2017-07-21 15:03:14 HHH000396: Updating schema
+2017-07-21 15:03:14 HHH000261: Table found: bigmoustache.barbier
+2017-07-21 15:03:14 HHH000037: Columns: [numero, photo, id, nom, prenom]
+2017-07-21 15:03:14 HHH000108: Foreign keys: []
+2017-07-21 15:03:14 HHH000126: Indexes: [primary]
+2017-07-21 15:03:14 HHH000261: Table found: bigmoustache.barbier_horaire
+2017-07-21 15:03:14 HHH000037: Columns: [barbier_id, horairedisponible_id]
+2017-07-21 15:03:14 HHH000108: Foreign keys: []
+2017-07-21 15:03:14 HHH000126: Indexes: [uk_8ql4xiyrdlyj3msyoudxqjirw, fk_c1p07wybg7n3wcko2c5v3jd0k]
+2017-07-21 15:03:14 HHH000261: Table found: bigmoustache.client
+2017-07-21 15:03:14 HHH000037: Columns: [numero, adresse, id, nom, prenom, email]
+2017-07-21 15:03:14 HHH000108: Foreign keys: []
+2017-07-21 15:03:14 HHH000126: Indexes: [primary]
+2017-07-21 15:03:14 HHH000261: Table found: bigmoustache.horaire
+2017-07-21 15:03:14 HHH000037: Columns: [horaire, id]
+2017-07-21 15:03:14 HHH000108: Foreign keys: []
+2017-07-21 15:03:14 HHH000126: Indexes: [primary]
+2017-07-21 15:03:14 HHH000232: Schema update complete
+2017-07-21 15:03:14 HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/bigmoustache]
+2017-07-21 15:03:31 HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-21 15:03:31 HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-21 15:03:31 HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2017-07-21 15:03:31 HHH000204: Processing PersistenceUnitInfo [
+	name: bigmoustache-pu
+	...]
+2017-07-21 15:03:31 HHH000412: Hibernate Core {4.3.10.Final}
+2017-07-21 15:03:31 HHH000206: hibernate.properties not found
+2017-07-21 15:03:31 HHH000021: Bytecode provider name : javassist
+2017-07-21 15:03:31 HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+2017-07-21 15:03:31 HHH000402: Using Hibernate built-in connection pool (not for production use!)
+2017-07-21 15:03:31 HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost/bigmoustache]
+2017-07-21 15:03:31 HHH000046: Connection properties: {user=root}
+2017-07-21 15:03:31 HHH000006: Autocommit mode: false
+2017-07-21 15:03:31 HHH000115: Hibernate connection pool size: 20 (min=1)
+2017-07-21 15:03:32 HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2017-07-21 15:03:32 HHH000397: Using ASTQueryTranslatorFactory
+2017-07-21 15:03:32 HV000001: Hibernate Validator 4.3.2.Final
+2017-07-21 15:03:32 HHH000228: Running hbm2ddl schema update
+2017-07-21 15:03:32 HHH000102: Fetching database metadata
+2017-07-21 15:03:32 HHH000396: Updating schema
+2017-07-21 15:03:32 HHH000261: Table found: bigmoustache.barbier
+2017-07-21 15:03:32 HHH000037: Columns: [numero, photo, id, nom, prenom]
+2017-07-21 15:03:32 HHH000108: Foreign keys: []
+2017-07-21 15:03:32 HHH000126: Indexes: [primary]
+2017-07-21 15:03:32 HHH000261: Table found: bigmoustache.barbier_horaire
+2017-07-21 15:03:32 HHH000037: Columns: [barbier_id, horairedisponible_id]
+2017-07-21 15:03:32 HHH000108: Foreign keys: []
+2017-07-21 15:03:32 HHH000126: Indexes: [uk_8ql4xiyrdlyj3msyoudxqjirw, fk_c1p07wybg7n3wcko2c5v3jd0k]
+2017-07-21 15:03:32 HHH000261: Table found: bigmoustache.client
+2017-07-21 15:03:32 HHH000037: Columns: [numero, adresse, id, nom, prenom, email]
+2017-07-21 15:03:32 HHH000108: Foreign keys: []
+2017-07-21 15:03:32 HHH000126: Indexes: [primary]
+2017-07-21 15:03:32 HHH000261: Table found: bigmoustache.horaire
+2017-07-21 15:03:32 HHH000037: Columns: [horaire, id]
+2017-07-21 15:03:32 HHH000108: Foreign keys: []
+2017-07-21 15:03:32 HHH000126: Indexes: [primary]
+2017-07-21 15:03:32 HHH000232: Schema update complete
+2017-07-21 15:03:33 HHH000030: Cleaning up connection pool [jdbc:mysql://localhost/bigmoustache]

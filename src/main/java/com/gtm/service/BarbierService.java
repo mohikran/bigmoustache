@@ -32,8 +32,8 @@ public class BarbierService implements Serializable, IBarbierService{
 	}
 
 	public void ajouter(Barbier barbier) {
-		//BarbierDao daodur = new BarbierDao();
-		//daodur.insert(barbier);
+//		BarbierDao daodur = new BarbierDao();
+//		daodur.insert(barbier);
 		barbierDao.insert(barbier);
 	}
 
