@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<h:outputStylesheet library="css" name="config.css" />
+
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Login Page</title>
+</h:head>
+<h:body>
+	<ui:composition template="template2.xhtml">
+
+		<ui:define name="content">
+
+			<div class="ui-g-3"></div>
+			<div class="ui-g-6">
+			<p>Bonjour chère moustache, renseigne nous sur toi s'il te plait</p>
+				<h:form>
+					<p:panel id="panellogin" header="Renseignement sur le client">
+
+						<p:messages id="msgs" />
+
+						<h:panelGrid columns="3" cellpadding="5">
+							<p:outputLabel for="Nom" value="Nom :" />
+							<p:inputText id="Nom" value="#{clientBean.client.nom}">
+							</p:inputText>
+							<p:message for="Nom" display="icon" />
+
+							<p:outputLabel for="Prenom" value="Prenom :" />
+							<p:inputText id="Prenom" value="#{clientBean.client.prenom}">
+							</p:inputText>
+							<p:message for="Prenom" display="icon" />
+							
+							<p:outputLabel for="Adresse" value="Adresse :" />
+							<p:inputText id="Adresse" value="#{clientBean.client.adresse}">
+							</p:inputText>
+							<p:message for="Adresse" display="icon" />
+							
+							<p:outputLabel for="Numero" value="Numero de telephone :" />
+							<p:inputText id="Numero" value="#{clientBean.client.numero}">
+							</p:inputText>
+							<p:message for="Numero" display="icon" />
+							
+							<p:outputLabel for="Email" value="Email :" />
+							<p:inputText id="Email" value="#{clientBean.client.email}">
+							</p:inputText>
+							<p:message for="Email" display="icon" />
+
+						</h:panelGrid>
+
+						<p:commandButton id="submitlogin" value="Merci Moustache" action="#{clientBean.creerClient}"
+							icon="ui-icon-check" />
+					</p:panel>
+				</h:form>
+			</div>
+			<div class="ui-g-3"></div>
+
+		</ui:define>
+
+	</ui:composition>
+</h:body>
+</html>

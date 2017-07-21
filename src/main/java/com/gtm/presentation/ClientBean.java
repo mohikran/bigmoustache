@@ -29,9 +29,12 @@ public class ClientBean implements Serializable {
 		client = new Client();
 	}
 
-	public void creerClient() {
-			System.out.println("Affichage client bean" + client);
+	public String creerClient() {
+			try{System.out.println("Affichage client bean" + client);
 			service.ajouter(client);
+			return "barbier";}catch (Exception e) {
+			return "formulaire";
+			}
 	}
 
 	public IClientService getService() {
